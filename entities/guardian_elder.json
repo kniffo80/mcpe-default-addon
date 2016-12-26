@@ -2,8 +2,7 @@
   "minecraft:entity": {
     "format_version": 0.1,
     "components": {
-      "minecraft:monster": {
-      },
+      "minecraft:monster": {},
       "minecraft:identifier": {
         "id": "minecraft:guardian.elder"
       },
@@ -11,12 +10,10 @@
         "width": 1.99,
         "height": 1.99
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables/entities/elder_guardian.json"
+        "table": "loot_tables\/entities\/elder_guardian.json"
       },
-
       "minecraft:health": {
         "value": 80,
         "max": 80
@@ -38,11 +35,16 @@
         "priority": 1,
         "entity_types": [
           {
-            "filters": { "other_with_families": [ "player", "squid" ] },
+            "filters": {
+              "other_with_families": [
+                "player",
+                "squid"
+              ]
+            },
             "max_dist": 16
           }
         ],
-        "attack_interval_min": 1.0,
+        "attack_interval_min": 1,
         "must_see": true
       },
       "minecraft:behavior.guardian_attack": {
@@ -50,8 +52,11 @@
       },
       "minecraft:behavior.move_towards_restriction": {
         "priority": 5,
-        "speed_multiplier": 1.0,
-        "control_flags": [ "move", "look" ]
+        "speed_multiplier": 1,
+        "control_flags": [
+          "move",
+          "look"
+        ]
       },
       "minecraft:behavior.random_stroll": {
         "priority": 7,
@@ -59,14 +64,17 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "look_distance": 12.0,
+        "look_distance": 12,
         "probability": 0.01
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
       },
       "minecraft:type_family": {
-        "family": [ "guardian_elder", "monster" ]
+        "family": [
+          "guardian_elder",
+          "monster"
+        ]
       }
     }
   }

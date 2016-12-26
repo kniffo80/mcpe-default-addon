@@ -1,12 +1,9 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:hopper_active": {
-        "minecraft:item_hopper": {
-
-        },
+        "minecraft:item_hopper": {},
         "minecraft:rail_sensor": {
           "on_activate": {
             "event": "minecraft:hopper_deactivate"
@@ -18,24 +15,23 @@
           "on_deactivate": {
             "event": "minecraft:hopper_activate"
           }
-        }        
+        }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:minecarthopper"
       },
       "minecraft:type_family": {
-        "family": [ "minecart" ]
+        "family": [
+          "minecart"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.5,
         "height": 0.9
       },
-      "minecraft:rail_movement": {
-
-      },
+      "minecraft:rail_movement": {},
       "minecraft:inventory": {
         "container_type": "minecart_hopper",
         "inventory_size": 5,
@@ -45,7 +41,6 @@
         "value": true
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {
@@ -79,6 +74,5 @@
         }
       }
     }
-
   }
 }

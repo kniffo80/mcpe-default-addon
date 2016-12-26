@@ -1,14 +1,12 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:mule_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale_by_age": {
           "start_scale": 0.5,
-          "end_scale": 1.0
+          "end_scale": 1
         },
         "minecraft:ageable": {
           "duration": 1200,
@@ -49,20 +47,18 @@
         },
         "minecraft:behavior.follow_parent": {
           "priority": 4,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
-
       "minecraft:mule_adult": {
         "minecraft:loot": {
-          "table": "loot_tables/entities/horse.json"
+          "table": "loot_tables\/entities\/horse.json"
         },
         "minecraft:behavior.run_around_like_crazy": {
           "priority": 1,
           "speed_multiplier": 1.2
         }
       },
-
       "minecraft:mule_wild": {
         "minecraft:rideable": {
           "seat_count": 1,
@@ -72,13 +68,17 @@
           ],
           "interact_text": "action.interact.mount",
           "seats": {
-            "position": [0.0, 0.975, -0.2]
+            "position": [
+              0,
+              0.975,
+              -0.2
+            ]
           }
         },
         "minecraft:behavior.mount_pathing": {
           "priority": 2,
           "speed_multiplier": 1.5,
-          "target_dist": 0.0,
+          "target_dist": 0,
           "track_target": true
         },
         "minecraft:tamemount": {
@@ -135,7 +135,6 @@
           }
         }
       },
-
       "minecraft:mule_tamed": {
         "minecraft:rideable": {
           "priority": 0,
@@ -143,18 +142,19 @@
           "crouching_skip_interact": true,
           "interact_text": "action.interact.ride.horse",
           "seats": {
-            "position": [0.0, 0.975, -0.2]
+            "position": [
+              0,
+              0.975,
+              -0.2
+            ]
           }
         },
-        "minecraft:behavior.player_ride_tamed": {
-
-        },
+        "minecraft:behavior.player_ride_tamed": {},
         "minecraft:inventory": {
           "inventory_size": 17,
           "container_type": "horse"
         }
       },
-
       "minecraft:mule_unchested": {
         "minecraft:interact": [
           {
@@ -171,27 +171,24 @@
           }
         ]
       },
-
       "minecraft:mule_chested": {
-        "minecraft:is_chested": {
-
-        }
+        "minecraft:is_chested": {}
       },
-
       "minecraft:mule_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:mule"
       },
       "minecraft:type_family": {
-        "family": [ "mule" ]
+        "family": [
+          "mule"
+        ]
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -199,22 +196,21 @@
       },
       "minecraft:health": {
         "value": {
-          "range_min": 15, 
+          "range_min": 15,
           "range_max": 30
         }
       },
       "minecraft:movement": {
         "value": 0.175
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:horse.jump_strength": {
         "value": 0.5
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -285,14 +281,13 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6.0,
+        "target_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 8
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
@@ -315,7 +310,6 @@
           }
         ]
       },
-
       "minecraft:entity_born": {
         "add": {
           "component_groups": [
@@ -323,7 +317,6 @@
           ]
         }
       },
-
       "minecraft:on_tame": {
         "remove": {
           "component_groups": [
@@ -337,7 +330,6 @@
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -351,7 +343,6 @@
           ]
         }
       },
-
       "minecraft:on_leash": {
         "add": {
           "component_groups": [
@@ -366,7 +357,6 @@
           ]
         }
       },
-
       "minecraft:on_chest": {
         "remove": {
           "component_groups": [

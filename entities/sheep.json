@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:rideable_sheared": {
         "minecraft:rideable": {
@@ -10,7 +9,11 @@
             "zombie"
           ],
           "seats": {
-            "position": [0.0, 0.9, 0.0]
+            "position": [
+              0,
+              0.9,
+              0
+            ]
           }
         }
       },
@@ -21,13 +24,16 @@
             "zombie"
           ],
           "seats": {
-            "position": [0.0, 0.975, 0.0]
+            "position": [
+              0,
+              0.975,
+              0
+            ]
           }
         }
       },
       "minecraft:sheep_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
         },
@@ -44,14 +50,13 @@
           "speed_multiplier": 1.1
         }
       },
-
       "minecraft:sheep_adult": {
         "minecraft:loot": {
-          "table": "loot_tables/entities/sheep.json"
+          "table": "loot_tables\/entities\/sheep.json"
         },
         "minecraft:behavior.breed": {
           "priority": 3,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         },
         "minecraft:breedable": {
           "requireTame": false,
@@ -63,17 +68,15 @@
         }
       },
       "minecraft:sheep_dyeable": {
-        "minecraft:is_dyeable": {
-        }
+        "minecraft:is_dyeable": {}
       },
       "minecraft:sheep_sheared": {
-        "minecraft:is_sheared": {
-        }
+        "minecraft:is_sheared": {}
       },
       "minecraft:sheep_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
       "minecraft:sheep_white": {
@@ -106,23 +109,21 @@
           "value": 6
         }
       }
-
     },
-
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:sheep"
       },
       "minecraft:type_family": {
-        "family": [ "sheep" ]
+        "family": [
+          "sheep"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.9,
         "height": 1.3
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:health": {
         "value": 8,
         "max": 8
@@ -136,7 +137,9 @@
           "cooldown": 2.5,
           "use_item": false,
           "hurt_item": 1,
-          "spawn_items": { "table": "loot_tables/entities/sheep_shear.json" },
+          "spawn_items": {
+            "table": "loot_tables\/entities\/sheep_shear.json"
+          },
           "play_sounds": "shear",
           "interact_text": "action.interact.shear",
           "on_interact": {
@@ -152,9 +155,9 @@
         }
       ],
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -174,7 +177,7 @@
       "minecraft:behavior.mount_pathing": {
         "priority": 2,
         "speed_multiplier": 1.5,
-        "target_dist": 0.0,
+        "target_dist": 0,
         "track_target": true
       },
       "minecraft:behavior.tempt": {
@@ -201,7 +204,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "target_distance": 6.0,
+        "target_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -215,8 +218,7 @@
             "randomize": [
               {
                 "weight": 95,
-                "remove": {
-                },
+                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:sheep_adult",
@@ -227,15 +229,13 @@
               },
               {
                 "weight": 5,
-                "remove": {
-                },
+                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:sheep_baby",
                     "minecraft:sheep_dyeable",
                     "rideable_sheared"
                   ]
-
                 }
               }
             ]
@@ -294,10 +294,8 @@
           }
         ]
       },
-
       "minecraft:entity_born": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:sheep_baby",
@@ -306,7 +304,6 @@
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -334,7 +331,7 @@
         }
       },
       "minecraft:on_eat_block": {
-        "sequence":[
+        "sequence": [
           {
             "remove": {
               "component_groups": [
@@ -348,7 +345,9 @@
             }
           },
           {
-            "filters": { "without_components": "minecraft:is_baby" },
+            "filters": {
+              "without_components": "minecraft:is_baby"
+            },
             "add": {
               "component_groups": [
                 "minecraft:rideable_wooly"

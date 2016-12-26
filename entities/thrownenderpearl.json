@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:thrownenderpearl"
@@ -12,12 +11,12 @@
       },
       "minecraft:projectile": {
         "onHit": {
-          "teleport_owner": { },
-          "remove_on_hit": { }
+          "teleport_owner": {},
+          "remove_on_hit": {}
         },
         "power": 0.5,
         "gravity": 0.05,
-        "angleoffset": -20.0
+        "angleoffset": -20
       }
     }
   }

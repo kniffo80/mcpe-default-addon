@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:thrownegg"
@@ -11,22 +10,21 @@
         "height": 0.25
       },
       "minecraft:projectile": {
-        
-       "onHit": {
-        "spawn_chance": {
-          "firstSpawnChance": 8,
-          "secondSpawnChance": 32,
-          "firstSpawnCount": 1,
-          "secondSpawnCount": 4,
-          "spawnMob": "chicken",
-          "spawnDefinition": "minecraft:chicken",
-          "spawnBaby": true
+        "onHit": {
+          "spawn_chance": {
+            "firstSpawnChance": 8,
+            "secondSpawnChance": 32,
+            "firstSpawnCount": 1,
+            "secondSpawnCount": 4,
+            "spawnMob": "chicken",
+            "spawnDefinition": "minecraft:chicken",
+            "spawnBaby": true
+          },
+          "remove_on_hit": {}
         },
-        "remove_on_hit": { }
-       },
         "power": 1.5,
         "gravity": 0.03,
-        "angleoffset": 0.0
+        "angleoffset": 0
       }
     }
   }

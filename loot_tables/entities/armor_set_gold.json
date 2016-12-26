@@ -7,7 +7,6 @@
           "type": "item",
           "name": "minecraft:golden_helmet",
           "weight": 1,
-
           "pools": [
             {
               "conditions": [
@@ -24,7 +23,6 @@
                   "type": "item",
                   "name": "minecraft:golden_chestplate",
                   "weight": 1,
-
                   "pools": [
                     {
                       "conditions": [
@@ -41,7 +39,6 @@
                           "type": "item",
                           "name": "minecraft:golden_leggings",
                           "weight": 1,
-
                           "pools": [
                             {
                               "conditions": [

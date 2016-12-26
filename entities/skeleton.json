@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:skeleton"
@@ -11,17 +10,19 @@
         "height": 1.95
       },
       "minecraft:type_family": {
-        "family": [ "skeleton", "undead", "monster" ]
+        "family": [
+          "skeleton",
+          "undead",
+          "monster"
+        ]
       },
-
-      "minecraft:burns_in_daylight": { },
-
+      "minecraft:burns_in_daylight": {},
       "minecraft:health": {
         "value": 20,
         "max": 20
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/skeleton.json"
+        "table": "loot_tables\/entities\/skeleton.json"
       },
       "minecraft:movement": {
         "value": 0.25,
@@ -31,10 +32,9 @@
         "type": "Arrow",
         "def": "minecraft:arrow.skeleton"
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:equipment": {
-        "table": "loot_tables/entities/skeleton_gear.json"
+        "table": "loot_tables\/entities\/skeleton_gear.json"
       },
       "minecraft:behavior.float": {
         "priority": 0
@@ -49,7 +49,9 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 16
           }
         ],
@@ -64,7 +66,6 @@
         "attack_interval_max": 3,
         "attack_radius": 15
       },
-
       "minecraft:behavior.random_stroll": {
         "priority": 5,
         "speed_multiplier": 1
@@ -77,11 +78,8 @@
         "priority": 6
       }
     },
-
     "events": {
-      "minecraft:entity_spawned": {
-
-      }
+      "minecraft:entity_spawned": {}
     }
   }
 }

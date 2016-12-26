@@ -1,26 +1,25 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
-
       "minecraft:identifier": {
         "id": "minecraft:npc"
       },
       "minecraft:type_family": {
-        "family": [ "npc" ]
+        "family": [
+          "npc"
+        ]
       },
-
       "minecraft:health": {
         "value": 20,
         "max": 20,
-        "min":  20
+        "min": 20
       },
       "minecraft:movement": {
         "value": 0.5
       },
       "minecraft:loot": {
-        "table": "loot_tables/empty.json"
+        "table": "loot_tables\/empty.json"
       },
       "minecraft:collision_box": {
         "width": 0.6,
@@ -28,17 +27,14 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 0,
-        "target_distance": 6.0,
+        "target_distance": 6,
         "probability": 0.02
       },
-      "minecraft:npc": {
-      },
+      "minecraft:npc": {},
       "minecraft:nameable": {
         "alwaysShow": true,
         "allowNameTagRenaming": false
       }
-
     }
-
   }
 }

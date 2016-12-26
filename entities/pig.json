@@ -1,13 +1,11 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:pig_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value":0.5
+          "value": 0.5
         },
         "minecraft:ageable": {
           "duration": 1200,
@@ -17,23 +15,20 @@
             "target": "self"
           }
         },
-
         "minecraft:behavior.follow_parent": {
           "priority": 6,
           "speed_multiplier": 1.1
         }
       },
-
       "minecraft:pig_transform": {
         "minecraft:transformation": {
           "into": "minecraft:pig_zombie",
           "delay": 0.5
         }
       },
-
       "minecraft:pig_adult": {
         "minecraft:loot": {
-          "table": "loot_tables/entities/pig.json"
+          "table": "loot_tables\/entities\/pig.json"
         },
         "minecraft:collision_box": {
           "width": 0.9,
@@ -41,7 +36,7 @@
         },
         "minecraft:behavior.breed": {
           "priority": 4,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         },
         "minecraft:breedable": {
           "requireTame": false,
@@ -56,7 +51,6 @@
           "breedItems": "carrot"
         }
       },
-
       "minecraft:pig_unsaddled": {
         "minecraft:interact": [
           {
@@ -76,20 +70,22 @@
             "zombie"
           ],
           "seats": {
-            "position": [0.0, 0.63, 0.0]
+            "position": [
+              0,
+              0.63,
+              0
+            ]
           }
         }
       },
-
       "minecraft:pig_saddled": {
-        "minecraft:is_saddled": {
-        },
+        "minecraft:is_saddled": {},
         "minecraft:loot": {
-          "table": "loot_tables/entities/pig_saddled.json"
+          "table": "loot_tables\/entities\/pig_saddled.json"
         },
         "minecraft:boostable": {
-          "speed_multiplier": 2.0,
-          "duration": 3.0,
+          "speed_multiplier": 2,
+          "duration": 3,
           "boost_items": [
             {
               "item": "carrotOnAStick",
@@ -102,8 +98,12 @@
           "seat_count": 1,
           "interact_text": "action.interact.mount",
           "seats": {
-            "position": [0.0, 0.63, 0.0]
-          }        
+            "position": [
+              0,
+              0.63,
+              0
+            ]
+          }
         },
         "minecraft:item_controllable": {
           "control_items": "carrotOnAStick"
@@ -112,16 +112,13 @@
           "priority": 0
         }
       },
-
       "minecraft:pig_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       }
     },
-
-
     "components": {
       "minecraft:damage_sensor": {
         "on_damage": {
@@ -136,10 +133,11 @@
         "id": "minecraft:pig"
       },
       "minecraft:type_family": {
-        "family": [ "pig" ]
+        "family": [
+          "pig"
+        ]
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:health": {
         "value": 10,
         "max": 10
@@ -149,9 +147,9 @@
         "max": 0.5
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -164,7 +162,7 @@
       "minecraft:behavior.mount_pathing": {
         "priority": 1,
         "speed_multiplier": 1.25,
-        "target_dist": 0.0,
+        "target_dist": 0,
         "track_target": true
       },
       "minecraft:behavior.float": {
@@ -186,23 +184,20 @@
       },
       "minecraft:behavior.random_stroll": {
         "priority": 7,
-        "speed_multiplier": 1.0
+        "speed_multiplier": 1
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "target_distance": 6.0,
+        "target_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
       }
     },
-
-
     "events": {
       "become_zombie": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:pig_transform"
@@ -213,8 +208,7 @@
         "randomize": [
           {
             "weight": 95,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:pig_adult",
@@ -224,28 +218,23 @@
           },
           {
             "weight": 5,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:pig_baby"
               ]
-
             }
           }
         ]
       },
-
       "minecraft:entity_born": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:pig_baby"
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -259,7 +248,6 @@
           ]
         }
       },
-
       "minecraft:on_saddled": {
         "remove": {
           "component_groups": [
@@ -272,7 +260,6 @@
           ]
         }
       },
-
       "minecraft:on_leash": {
         "add": {
           "component_groups": [

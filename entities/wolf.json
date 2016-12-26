@@ -1,15 +1,12 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:wolf_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value":0.5
+          "value": 0.5
         },
-      
         "minecraft:ageable": {
           "duration": 1200,
           "feedItems": [
@@ -31,10 +28,9 @@
           }
         }
       },
-
       "minecraft:wolf_adult": {
         "minecraft:loot": {
-          "table": "loot_tables/entities/wolf.json"
+          "table": "loot_tables\/entities\/wolf.json"
         },
         "minecraft:breedable": {
           "requireTame": true,
@@ -61,7 +57,6 @@
           ]
         }
       },
-
       "minecraft:wolf_angry": {
         "minecraft:angry": {
           "duration": 25,
@@ -72,10 +67,8 @@
             "target": "self"
           }
         },
-        "minecraft:on_target_acquired": {
-        }
+        "minecraft:on_target_acquired": {}
       },
-
       "minecraft:wolf_wild": {
         "minecraft:tameable": {
           "probability": 0.33,
@@ -85,13 +78,18 @@
             "target": "self"
           }
         },
-
         "minecraft:behavior.nearest_attackable_target": {
           "priority": 4,
           "attack_interval": 10,
           "entity_types": [
             {
-              "filters": { "other_with_families": [ "skeleton", "sheep", "rabbit" ] },
+              "filters": {
+                "other_with_families": [
+                  "skeleton",
+                  "sheep",
+                  "rabbit"
+                ]
+              },
               "max_dist": 16
             }
           ],
@@ -107,14 +105,16 @@
             "zombie"
           ],
           "seats": {
-            "position": [0.0, 0.675, -0.1]
+            "position": [
+              0,
+              0.675,
+              -0.1
+            ]
           }
         }
       },
-
       "minecraft:wolf_tame": {
-        "minecraft:is_tamed": {
-        },
+        "minecraft:is_tamed": {},
         "minecraft:health": {
           "value": 20,
           "max": 20
@@ -124,7 +124,7 @@
         },
         "minecraft:behavior.follow_owner": {
           "priority": 6,
-          "speed_multiplier": 1.0,
+          "speed_multiplier": 1,
           "start_distance": 10,
           "stop_distance": 2
         },
@@ -134,7 +134,6 @@
         "minecraft:behavior.breed": {
           "priority": 7
         },
-
         "minecraft:behavior.owner_hurt_by_target": {
           "priority": 1
         },
@@ -146,23 +145,22 @@
           "attack_interval": 10,
           "entity_types": [
             {
-              "filters": { "other_with_families": "skeleton" },
+              "filters": {
+                "other_with_families": "skeleton"
+              },
               "max_dist": 16
             }
           ],
           "must_see": true
         },
-
-        "minecraft:sittable": {
-        },
+        "minecraft:sittable": {},
         "minecraft:is_dyeable": {
           "interact_text": "action.interact.wolfcollar"
         },
-
         "minecraft:leashable": {
-          "soft_distance": 4.0,
-          "hard_distance": 6.0,
-          "max_distance": 10.0,
+          "soft_distance": 4,
+          "hard_distance": 6,
+          "max_distance": 10,
           "on_leash": {
             "event": "minecraft:on_leash",
             "target": "self"
@@ -173,24 +171,22 @@
           }
         }
       },
-
       "minecraft:wolf_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       }
     },
-
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:wolf"
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:type_family": {
-        "family": [ "wolf" ]
+        "family": [
+          "wolf"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.6,
@@ -252,32 +248,33 @@
         "priority": 5,
         "target_dist": 1.2,
         "track_target": true,
-        "reach_multiplier": 1.0
+        "reach_multiplier": 1
       },
       "minecraft:behavior.random_stroll": {
         "priority": 8,
-        "speed_multiplier": 1.0
+        "speed_multiplier": 1
       },
       "minecraft:behavior.beg": {
         "priority": 9,
         "look_distance": 8,
-        "look_time": [ 2, 4 ],
-        "items": [ "bone" ]
+        "look_time": [
+          2,
+          4
+        ],
+        "items": [
+          "bone"
+        ]
       },
-
       "minecraft:behavior.hurt_by_target": {
         "priority": 3
       }
     },
-
-
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
           {
             "weight": 9,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:wolf_adult",
@@ -287,22 +284,18 @@
           },
           {
             "weight": 1,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:wolf_baby",
                 "minecraft:wolf_wild"
               ]
-
             }
           }
         ]
       },
-
       "minecraft:entity_born": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:wolf_baby",
@@ -310,7 +303,6 @@
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -323,7 +315,6 @@
           ]
         }
       },
-
       "minecraft:ageable_set_baby": {
         "remove": {
           "component_groups": [
@@ -336,7 +327,6 @@
           ]
         }
       },
-
       "minecraft:on_tame": {
         "remove": {
           "component_groups": [
@@ -373,7 +363,6 @@
           ]
         }
       },
-
       "minecraft:on_leash": {
         "add": {
           "component_groups": [

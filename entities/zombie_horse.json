@@ -1,22 +1,23 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "component_groups": {
       "minecraft:zombie_horse_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:zombiehorse"
       },
       "minecraft:type_family": {
-        "family": [ "zombiehorse", "undead" ]
+        "family": [
+          "zombiehorse",
+          "undead"
+        ]
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -27,25 +28,23 @@
         "max": 15
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/zombie_horse.json"
+        "table": "loot_tables\/entities\/zombie_horse.json"
       },
       "minecraft:movement": {
         "value": 0.2
       },
-      "minecraft:nameable": {
-      },
-      "minecraft:is_tamed": {
-      },
+      "minecraft:nameable": {},
+      "minecraft:is_tamed": {},
       "minecraft:horse.jump_strength": {
         "value": {
-          "range_min": 0.4, 
-          "range_max": 1.0
+          "range_min": 0.4,
+          "range_max": 1
         }
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -68,13 +67,12 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6.0,
+        "target_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 8
       },
-
       "minecraft:rideable": {
         "priority": 0,
         "seat_count": 1,
@@ -83,20 +81,21 @@
         ],
         "interact_text": "action.interact.ride.horse",
         "seats": {
-          "position": [0.0, 1.2, -0.2]
+          "position": [
+            0,
+            1.2,
+            -0.2
+          ]
         }
       },
       "minecraft:behavior.mount_pathing": {
         "priority": 2,
         "speed_multiplier": 1.5,
-        "target_dist": 0.0,
+        "target_dist": 0,
         "track_target": true
       },
-      "minecraft:player_ride_tamed": {
-
-      }
+      "minecraft:player_ride_tamed": {}
     },
-
     "events": {
       "minecraft:on_leash": {
         "add": {

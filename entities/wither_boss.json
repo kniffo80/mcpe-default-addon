@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:wither.boss"
@@ -15,10 +14,9 @@
         "height": 3
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/wither_boss.json"
+        "table": "loot_tables\/entities\/wither_boss.json"
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:movement": {
         "value": 0.25,
         "max": 0.25
@@ -39,11 +37,15 @@
         "priority": 3,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 70
           },
           {
-            "filters": { "other_without_families": "undead" },
+            "filters": {
+              "other_without_families": "undead"
+            },
             "max_dist": 70
           }
         ],
@@ -63,16 +65,16 @@
       "minecraft:behavior.random_look_around": {
         "priority": 7
       },
-
       "minecraft:type_family": {
-        "family": [ "skeleton", "undead", "monster" ]
+        "family": [
+          "skeleton",
+          "undead",
+          "monster"
+        ]
       }
     },
-
     "events": {
-      "minecraft:entity_spawned": {
-
-      }
+      "minecraft:entity_spawned": {}
     }
   }
 }

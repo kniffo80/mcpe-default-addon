@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:skeleton.wither"
@@ -12,18 +11,18 @@
       },
       "minecraft:collision_box": {
         "width": 0.72,
-        "height": 2.0
+        "height": 2
       },
       "minecraft:attack": {
         "damage": 4,
         "effect_name": "wither",
         "effect_duration": 10
-			},
+      },
       "minecraft:loot": {
-        "table": "loot_tables/entities/wither_skeleton.json"
+        "table": "loot_tables\/entities\/wither_skeleton.json"
       },
       "minecraft:equipment": {
-        "table": "loot_tables/entities/wither_skeleton_gear.json"
+        "table": "loot_tables\/entities\/wither_skeleton_gear.json"
       },
       "minecraft:movement": {
         "value": 0.25,
@@ -43,7 +42,9 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 16
           }
         ],
@@ -67,14 +68,14 @@
         "priority": 6
       },
       "minecraft:type_family": {
-        "family": [ "wither", "monster" ]
+        "family": [
+          "wither",
+          "monster"
+        ]
       }
     },
-
     "events": {
-      "minecraft:entity_spawned": {
-
-      }
+      "minecraft:entity_spawned": {}
     }
   }
 }
