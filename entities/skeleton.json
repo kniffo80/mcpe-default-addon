@@ -1,6 +1,20 @@
 {
   "minecraft:entity": {
     "format_version": 0.1,
+    "component_groups": {
+      "minecraft:lightning_immune": {
+        "minecraft:damage_sensor": [
+          {
+            "on_damage": {
+              "filters": {
+                "other_with_families": "lightning"
+              }
+            },
+            "deals_damage": false
+          }
+        ]
+      }
+    },
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:skeleton"
@@ -15,6 +29,10 @@
           "undead",
           "monster"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:burns_in_daylight": {},
       "minecraft:health": {
@@ -79,7 +97,14 @@
       }
     },
     "events": {
-      "minecraft:entity_spawned": {}
+      "minecraft:entity_spawned": {},
+      "minecraft:spring_trap": {
+        "add": {
+          "component_groups": [
+            "minecraft:lightning_immune"
+          ]
+        }
+      }
     }
   }
 }

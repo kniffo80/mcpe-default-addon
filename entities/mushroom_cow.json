@@ -109,6 +109,10 @@
           "mushroomcow"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:collision_box": {
         "width": 0.9,
         "height": 1.3
@@ -182,7 +186,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {

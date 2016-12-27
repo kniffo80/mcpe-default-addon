@@ -2,7 +2,6 @@
   "minecraft:entity": {
     "format_version": 0.1,
     "components": {
-      "minecraft:monster": {},
       "minecraft:identifier": {
         "id": "minecraft:guardian.elder"
       },
@@ -28,7 +27,7 @@
         "value": 16,
         "max": 16
       },
-      "breathable": {
+      "minecraft:breathable": {
         "breathesWater": true
       },
       "minecraft:behavior.nearest_attackable_target": {

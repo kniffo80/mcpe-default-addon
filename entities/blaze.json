@@ -61,7 +61,7 @@
         "attack_interval_min": 3,
         "attack_interval_max": 5,
         "charge_charged_trigger": 0,
-        "charge_shoot_trigger": 5,
+        "charge_shoot_trigger": 4,
         "attack_radius": 16,
         "burst_shots": 3,
         "burst_interval": 0.3

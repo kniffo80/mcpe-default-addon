@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minecraft:diamond",
+          "name": "minecraft:emerald",
           "functions": [
             {
               "function": "set_count",
@@ -97,17 +97,17 @@
         },
         {
           "type": "item",
-          "name": "minecraft:iron_horse_armor",
+          "name": "minecraft:horsearmoriron",
           "weight": 1
         },
         {
           "type": "item",
-          "name": "minecraft:golden_horse_armor",
+          "name": "minecraft:horsearmorgold",
           "weight": 1
         },
         {
           "type": "item",
-          "name": "minecraft:diamond_horse_armor",
+          "name": "minecraft:horsearmordiamond",
           "weight": 1
         },
         {

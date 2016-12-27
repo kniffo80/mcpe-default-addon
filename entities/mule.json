@@ -136,6 +136,20 @@
         }
       },
       "minecraft:mule_tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:equippable": {
+          "slots": [
+            {
+              "item": "saddle",
+              "on_equip": {
+                "event": "minecraft:mule_saddled"
+              },
+              "on_unequip": {
+                "event": "minecraft:mule_unsaddled"
+              }
+            }
+          ]
+        },
         "minecraft:rideable": {
           "priority": 0,
           "seat_count": 1,
@@ -174,6 +188,9 @@
       "minecraft:mule_chested": {
         "minecraft:is_chested": {}
       },
+      "minecraft:mule_saddled": {
+        "minecraft:is_saddled": {}
+      },
       "minecraft:mule_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
@@ -189,6 +206,10 @@
         "family": [
           "mule"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -281,7 +302,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -366,6 +387,20 @@
         "add": {
           "component_groups": [
             "minecraft:mule_chested"
+          ]
+        }
+      },
+      "minecraft:mule_saddled": {
+        "add": {
+          "component_groups": [
+            "minecraft:mule_saddled"
+          ]
+        }
+      },
+      "minecraft:mule_unsaddled": {
+        "remove": {
+          "component_groups": [
+            "minecraft:mule_saddled"
           ]
         }
       }

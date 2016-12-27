@@ -2,6 +2,12 @@
   "minecraft:entity": {
     "format_version": 0.1,
     "components": {
+      "minecraft:damage_sensor": [
+        {
+          "cause": "all",
+          "deals_damage": false
+        }
+      ],
       "minecraft:identifier": {
         "id": "minecraft:npc"
       },
@@ -27,7 +33,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 0,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:npc": {},

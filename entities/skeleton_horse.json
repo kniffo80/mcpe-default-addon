@@ -17,10 +17,14 @@
           "speed_multiplier": 1
         }
       },
-      "skeleton_trap": {
-        "minecraft:is_trap": {}
+      "minecraft:skeleton_trap": {
+        "minecraft:behavior.skeleton_horse_trap": {
+          "within_radius": 10,
+          "duration": 900,
+          "priority": 2
+        }
       },
-      "trap_spawned": {
+      "minecraft:lightning_immune": {
         "minecraft:damage_sensor": [
           {
             "on_damage": {
@@ -43,6 +47,10 @@
           "undead"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:health": {
         "value": 15,
         "max": 15
@@ -51,7 +59,6 @@
         "value": 0.2
       },
       "minecraft:nameable": {},
-      "minecraft:is_tamed": {},
       "minecraft:horse.jump_strength": {
         "value": {
           "range_min": 0.4,
@@ -84,7 +91,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -108,10 +115,9 @@
       "minecraft:behavior.mount_pathing": {
         "priority": 2,
         "speed_multiplier": 1.5,
-        "target_dist": 0,
+        "target_dist": 4,
         "track_target": true
-      },
-      "minecraft:behavior.player_ride_tamed": {}
+      }
     },
     "events": {
       "minecraft:entity_spawned": {
@@ -135,18 +141,18 @@
           ]
         }
       },
-      "set_trap": {
+      "minecraft:set_trap": {
         "add": {
           "component_groups": [
-            "skeleton_trap",
-            "trap_spawned"
+            "minecraft:skeleton_trap",
+            "minecraft:lightning_immune"
           ]
         }
       },
-      "spring_trap": {
+      "minecraft:spring_trap": {
         "add": {
           "component_groups": [
-            "trap_spawned"
+            "minecraft:lightning_immune"
           ]
         }
       }

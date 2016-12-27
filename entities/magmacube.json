@@ -16,6 +16,9 @@
         },
         "minecraft:attack": {
           "damage": 6
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/magma_cube.json"
         }
       },
       "minecraft:slime_medium": {
@@ -32,6 +35,9 @@
         },
         "minecraft:attack": {
           "damage": 4
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/magma_cube.json"
         }
       },
       "minecraft:slime_small": {
@@ -62,14 +68,8 @@
         ]
       },
       "minecraft:nameable": {},
-      "minecraft:loot": {
-        "table": "loot_tables/entities/magma_cube.json"
-      },
       "minecraft:fire_immune": true,
       "minecraft:burns_in_daylight": false,
-      "minecraft:hurt_when_wet": {
-        "value": true
-      },
       "minecraft:fall_damage": {
         "value": 0
       },

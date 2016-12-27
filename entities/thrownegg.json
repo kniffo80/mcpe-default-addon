@@ -11,6 +11,11 @@
       },
       "minecraft:projectile": {
         "onHit": {
+          "impact_damage": {
+            "damage": 0,
+            "knockback": true,
+            "destroyonhit": true
+          },
           "spawn_chance": {
             "firstSpawnChance": 8,
             "secondSpawnChance": 32,

@@ -5,6 +5,10 @@
       "minecraft:identifier": {
         "id": "minecraft:skeleton.wither"
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:health": {
         "value": 20,
         "max": 20
@@ -70,7 +74,8 @@
       "minecraft:type_family": {
         "family": [
           "wither",
-          "monster"
+          "monster",
+          "undead"
         ]
       }
     },

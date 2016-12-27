@@ -12,11 +12,18 @@
       "minecraft:projectile": {
         "onHit": {
           "teleport_owner": {},
+          "spawn_chance": {
+            "firstSpawnPercentChance": 5,
+            "firstSpawnCount": 1,
+            "spawnDefinition": "minecraft:endermite"
+          },
           "remove_on_hit": {}
         },
-        "power": 0.5,
-        "gravity": 0.05,
-        "angleoffset": -20
+        "power": 1.5,
+        "gravity": 0.025,
+        "angleoffset": 0,
+        "inertia": 1,
+        "liquid_inertia": 1
       }
     }
   }

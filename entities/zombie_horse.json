@@ -19,6 +19,10 @@
           "undead"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:collision_box": {
         "width": 1.4,
         "height": 1.6
@@ -67,7 +71,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -94,7 +98,7 @@
         "target_dist": 0,
         "track_target": true
       },
-      "minecraft:player_ride_tamed": {}
+      "minecraft:behavior.player_ride_tamed": {}
     },
     "events": {
       "minecraft:on_leash": {

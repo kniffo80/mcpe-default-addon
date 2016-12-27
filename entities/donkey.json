@@ -140,6 +140,20 @@
         }
       },
       "minecraft:donkey_tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:equippable": {
+          "slots": [
+            {
+              "item": "saddle",
+              "on_equip": {
+                "event": "minecraft:donkey_saddled"
+              },
+              "on_unequip": {
+                "event": "minecraft:donkey_unsaddled"
+              }
+            }
+          ]
+        },
         "minecraft:rideable": {
           "priority": 0,
           "seat_count": 1,
@@ -205,6 +219,9 @@
       "minecraft:donkey_chested": {
         "minecraft:is_chested": {}
       },
+      "minecraft:donkey_saddled": {
+        "minecraft:is_saddled": {}
+      },
       "minecraft:donkey_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
@@ -220,6 +237,10 @@
         "family": [
           "donkey"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -312,7 +333,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -397,6 +418,20 @@
         "add": {
           "component_groups": [
             "minecraft:donkey_chested"
+          ]
+        }
+      },
+      "minecraft:donkey_saddled": {
+        "add": {
+          "component_groups": [
+            "minecraft:donkey_saddled"
+          ]
+        }
+      },
+      "minecraft:donkey_unsaddled": {
+        "remove": {
+          "component_groups": [
+            "minecraft:donkey_saddled"
           ]
         }
       }

@@ -39,7 +39,21 @@
               "target": "baby"
             }
           }
-        }
+        },
+        "minecraft:interact": [
+          {
+            "on_interact": {
+              "filters": {
+                "other_with_item": "bucket:0",
+                "other_with_families": "player"
+              }
+            },
+            "use_item": "true",
+            "transform_to_item": "bucket:1",
+            "play_sounds": "milk",
+            "interact_text": "action.interact.milk"
+          }
+        ]
       },
       "minecraft:cow_leashed": {
         "minecraft:behavior.move_towards_restriction": {
@@ -56,6 +70,10 @@
         "family": [
           "cow"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:collision_box": {
         "width": 0.9,
@@ -104,26 +122,12 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
       },
-      "minecraft:interact": [
-        {
-          "on_interact": {
-            "filters": {
-              "other_with_item": "bucket:0",
-              "other_with_families": "player"
-            }
-          },
-          "use_item": "true",
-          "transform_to_item": "bucket:1",
-          "play_sounds": "milk",
-          "interact_text": "action.interact.milk"
-        }
-      ],
       "minecraft:leashable": {
         "soft_distance": 4,
         "hard_distance": 6,

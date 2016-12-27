@@ -6,9 +6,6 @@
         "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
-        },
-        "minecraft:ageable": {
-          "duration": -1
         }
       },
       "minecraft:pig_zombie_adult": {},
@@ -31,11 +28,14 @@
       }
     },
     "components": {
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 1.8
       },
-      "minecraft:monster": {},
       "minecraft:nameable": {},
       "minecraft:fire_immune": true,
       "minecraft:burns_in_daylight": false,
@@ -66,10 +66,6 @@
       "minecraft:attack": {
         "damage": 5
       },
-      "minecraft:zombie.spawn_reinforcements": {
-        "value": 0,
-        "max": 1
-      },
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -96,7 +92,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {

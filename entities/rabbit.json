@@ -21,7 +21,7 @@
         },
         "minecraft:behavior.follow_parent": {
           "priority": 6,
-          "speed_modifier": 1.1
+          "speed_multiplier": 1.1
         }
       },
       "adult": {
@@ -33,7 +33,7 @@
         },
         "minecraft:behavior.breed": {
           "priority": 2,
-          "speed_modifier": 1
+          "speed_multiplier": 1
         },
         "minecraft:breedable": {
           "breedItems": [
@@ -54,7 +54,7 @@
       "minecraft:rabbit_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_modifier": 1
+          "speed_multiplier": 1
         }
       },
       "coat_brown": {
@@ -97,6 +97,10 @@
           "rabbit"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:nameable": {},
       "minecraft:health": {
         "value": 3,
@@ -126,9 +130,9 @@
       "minecraft:behavior.float": {
         "priority": 0
       },
-      "minecraft:behavior.rabbit_panic": {
+      "minecraft:behavior.panic": {
         "priority": 1,
-        "speed_modifier": 2.2
+        "speed_multiplier": 2.2
       },
       "minecraft:behavior.avoid_mob_type": {
         "priority": 4,
@@ -161,11 +165,11 @@
       },
       "minecraft:behavior.breed": {
         "priority": 2,
-        "speed_modifier": 0.8
+        "speed_multiplier": 0.8
       },
       "minecraft:behavior.tempt": {
         "priority": 3,
-        "speed_modifier": 1,
+        "speed_multiplier": 1,
         "items": [
           "golden_carrot",
           "carrot",
@@ -175,14 +179,14 @@
       "minecraft:behavior.raid_garden": {
         "priority": 5,
         "blocks": [
-          "minecraft:carrot"
+          "carrots"
         ],
         "search_range": 16,
         "goal_radius": 0.8
       },
       "minecraft:behavior.random_stroll": {
         "priority": 6,
-        "speed_modifier": 0.6,
+        "speed_multiplier": 0.6,
         "xz_dist": 2,
         "y_dist": 1
       },

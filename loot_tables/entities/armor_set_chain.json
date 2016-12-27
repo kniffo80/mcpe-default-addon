@@ -7,6 +7,12 @@
           "type": "item",
           "name": "minecraft:chainmail_helmet",
           "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.5
+            }
+          ],
           "pools": [
             {
               "conditions": [
@@ -23,6 +29,12 @@
                   "type": "item",
                   "name": "minecraft:chainmail_chestplate",
                   "weight": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_random_gear",
+                      "chance": 0.5
+                    }
+                  ],
                   "pools": [
                     {
                       "conditions": [
@@ -39,6 +51,12 @@
                           "type": "item",
                           "name": "minecraft:chainmail_leggings",
                           "weight": 1,
+                          "functions": [
+                            {
+                              "function": "enchant_random_gear",
+                              "chance": 0.5
+                            }
+                          ],
                           "pools": [
                             {
                               "conditions": [
@@ -54,7 +72,13 @@
                                 {
                                   "type": "item",
                                   "name": "minecraft:chainmail_boots",
-                                  "weight": 1
+                                  "weight": 1,
+                                  "functions": [
+                                    {
+                                      "function": "enchant_random_gear",
+                                      "chance": 0.5
+                                    }
+                                  ]
                                 }
                               ]
                             }

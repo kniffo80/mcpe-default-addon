@@ -34,8 +34,13 @@
       },
       "minecraft:type_family": {
         "family": [
-          "silverfish"
+          "silverfish",
+          "monster"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:nameable": {},
       "minecraft:loot": {

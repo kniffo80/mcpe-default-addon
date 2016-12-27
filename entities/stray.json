@@ -13,6 +13,10 @@
       "minecraft:identifier": {
         "id": "minecraft:skeleton.stray"
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 1.95
@@ -24,7 +28,7 @@
         "max": 20
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/skeleton.json"
+        "table": "loot_tables/entities/stray.json"
       },
       "minecraft:movement": {
         "value": 0.25,
@@ -82,7 +86,8 @@
       "minecraft:type_family": {
         "family": [
           "stray",
-          "monster"
+          "monster",
+          "undead"
         ]
       }
     },

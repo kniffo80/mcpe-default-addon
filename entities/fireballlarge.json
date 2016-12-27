@@ -7,7 +7,7 @@
           "fuseLength": 0,
           "fuseLit": true,
           "power": 1,
-          "causesFire": false
+          "causesFire": true
         }
       }
     },

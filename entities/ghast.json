@@ -5,6 +5,11 @@
       "minecraft:identifier": {
         "id": "minecraft:ghast"
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:fire_immune": true,
       "minecraft:nameable": {},
       "minecraft:health": {
         "value": 10,
@@ -34,6 +39,10 @@
         "attack_radius": 64,
         "charge_shoot_trigger": 2,
         "charge_charged_trigger": 1
+      },
+      "minecraft:follow_range": {
+        "value": 64,
+        "max": 64
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1

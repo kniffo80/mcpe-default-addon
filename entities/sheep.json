@@ -68,7 +68,9 @@
         }
       },
       "minecraft:sheep_dyeable": {
-        "minecraft:is_dyeable": {}
+        "minecraft:is_dyeable": {
+          "interact_text": "action.interact.dye"
+        }
       },
       "minecraft:sheep_sheared": {
         "minecraft:is_sheared": {}
@@ -118,6 +120,10 @@
         "family": [
           "sheep"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:collision_box": {
         "width": 0.9,
@@ -204,7 +210,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {

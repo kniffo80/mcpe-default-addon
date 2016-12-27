@@ -5,7 +5,7 @@
       "minecraft:horse_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale_by_age": {
-          "start_scale": 0.75,
+          "start_scale": 0.5,
           "end_scale": 1
         },
         "minecraft:ageable": {
@@ -188,6 +188,21 @@
             "golden_apple",
             "appleEnchanted"
           ]
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "items": [
+            "apple",
+            "carrot",
+            "golden_apple",
+            "appleEnchanted",
+            "golden_carrot",
+            "tile.hay_block",
+            "sugar",
+            "bread",
+            "wheat"
+          ]
         }
       },
       "minecraft:horse_leashed": {
@@ -226,6 +241,10 @@
         "family": [
           "horse"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -302,29 +321,13 @@
         "priority": 3,
         "speed_multiplier": 1.2
       },
-      "minecraft:behavior.tempt": {
-        "priority": 5,
-        "speed_multiplier": 1.2,
-        "items": [
-          "apple",
-          "carrot",
-          "golden_apple",
-          "appleEnchanted",
-          "golden_carrot",
-          "carrotOnAStick",
-          "tile.hay_block",
-          "sugar",
-          "bread",
-          "wheat"
-        ]
-      },
       "minecraft:behavior.random_stroll": {
         "priority": 6,
         "speed_multiplier": 0.7
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {

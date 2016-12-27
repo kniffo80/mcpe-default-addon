@@ -155,7 +155,7 @@
         },
         "minecraft:sittable": {},
         "minecraft:is_dyeable": {
-          "interact_text": "action.interact.wolfcollar"
+          "interact_text": "action.interact.dye"
         },
         "minecraft:leashable": {
           "soft_distance": 4,
@@ -188,13 +188,13 @@
           "wolf"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 0.8
-      },
-      "minecraft:on_calm": {
-        "event": "minecraft:on_calm",
-        "target": "self"
       },
       "minecraft:health": {
         "value": 8,

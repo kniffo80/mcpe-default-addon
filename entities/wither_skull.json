@@ -28,11 +28,12 @@
               "target": "self"
             }
           },
-          "potion_effect": {
-            "effect": 36,
+          "mob_effect": {
+            "effect": "wither",
             "durationeasy": 0,
             "durationnormal": 200,
-            "durationhard": 800
+            "durationhard": 800,
+            "amplifier": 1
           }
         },
         "power": 1.2,

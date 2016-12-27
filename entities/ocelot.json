@@ -32,6 +32,7 @@
         },
         "minecraft:breedable": {
           "requireTame": true,
+          "allowSitting": true,
           "breedsWith": {
             "mateType": "minecraft:ocelot",
             "babyType": "minecraft:ocelot",
@@ -168,6 +169,10 @@
         "family": [
           "ocelot"
         ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
       },
       "minecraft:health": {
         "value": 10,

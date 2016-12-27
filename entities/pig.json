@@ -9,7 +9,11 @@
         },
         "minecraft:ageable": {
           "duration": 1200,
-          "feedItems": "carrot",
+          "feedItems": [
+            "carrot",
+            "beetroot",
+            "potato"
+          ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -48,7 +52,11 @@
               "target": "baby"
             }
           },
-          "breedItems": "carrot"
+          "breedItems": [
+            "carrot",
+            "beetroot",
+            "potato"
+          ]
         }
       },
       "minecraft:pig_unsaddled": {
@@ -61,6 +69,7 @@
               "event": "minecraft:on_saddled"
             },
             "use_item": true,
+            "play_sounds": "saddle",
             "interact_text": "action.interact.saddle"
           }
         ],
@@ -137,6 +146,10 @@
           "pig"
         ]
       },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
       "minecraft:nameable": {},
       "minecraft:health": {
         "value": 10,
@@ -188,7 +201,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "target_distance": 6,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
