@@ -28,7 +28,7 @@
       },
       "minecraft:pig_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/pig.json"
+          "table": "loot_tables/entities/pig.json"
         },
         "minecraft:collision_box": {
           "width": 0.9,
@@ -81,7 +81,7 @@
       "minecraft:pig_saddled": {
         "minecraft:is_saddled": {},
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/pig_saddled.json"
+          "table": "loot_tables/entities/pig_saddled.json"
         },
         "minecraft:boostable": {
           "speed_multiplier": 2,

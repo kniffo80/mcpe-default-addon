@@ -14,7 +14,7 @@
         "height": 3
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/wither_boss.json"
+        "table": "loot_tables/entities/wither_boss.json"
       },
       "minecraft:nameable": {},
       "minecraft:movement": {

@@ -19,7 +19,7 @@
         "value": 0.5
       },
       "minecraft:loot": {
-        "table": "loot_tables\/empty.json"
+        "table": "loot_tables/empty.json"
       },
       "minecraft:collision_box": {
         "width": 0.6,

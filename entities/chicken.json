@@ -27,7 +27,7 @@
       },
       "minecraft:chicken_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/chicken.json"
+          "table": "loot_tables/entities/chicken.json"
         },
         "minecraft:breedable": {
           "requireTame": false,

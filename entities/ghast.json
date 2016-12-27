@@ -15,7 +15,7 @@
         "height": 4
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/ghast.json"
+        "table": "loot_tables/entities/ghast.json"
       },
       "minecraft:shooter": {
         "type": "largefireball",

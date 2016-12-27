@@ -52,7 +52,7 @@
       },
       "minecraft:sheep_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/sheep.json"
+          "table": "loot_tables/entities/sheep.json"
         },
         "minecraft:behavior.breed": {
           "priority": 3,
@@ -138,7 +138,7 @@
           "use_item": false,
           "hurt_item": 1,
           "spawn_items": {
-            "table": "loot_tables\/entities\/sheep_shear.json"
+            "table": "loot_tables/entities/sheep_shear.json"
           },
           "play_sounds": "shear",
           "interact_text": "action.interact.shear",

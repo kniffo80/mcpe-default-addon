@@ -7,7 +7,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/witch.json"
+        "table": "loot_tables/entities/witch.json"
       },
       "minecraft:health": {
         "value": 26,

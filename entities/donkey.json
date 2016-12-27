@@ -52,7 +52,7 @@
       },
       "minecraft:donkey_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/horse.json"
+          "table": "loot_tables/entities/horse.json"
         },
         "minecraft:behavior.run_around_like_crazy": {
           "priority": 1,

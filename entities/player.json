@@ -11,7 +11,7 @@
         ]
       },
       "minecraft:loot": {
-        "table": "loot_tables\/empty.json"
+        "table": "loot_tables/empty.json"
       },
       "minecraft:movement": {
         "value": 0.1,

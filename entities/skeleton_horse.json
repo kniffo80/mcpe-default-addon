@@ -4,7 +4,7 @@
     "component_groups": {
       "minecraft:skeleton_horse_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/skeleton_horse.json"
+          "table": "loot_tables/entities/skeleton_horse.json"
         },
         "minecraft:collision_box": {
           "width": 1.4,

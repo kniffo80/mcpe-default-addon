@@ -30,7 +30,7 @@
       },
       "minecraft:wolf_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/wolf.json"
+          "table": "loot_tables/entities/wolf.json"
         },
         "minecraft:breedable": {
           "requireTame": true,

@@ -34,7 +34,7 @@
         "max": 10
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/squid.json"
+        "table": "loot_tables/entities/squid.json"
       },
       "minecraft:breathable": {
         "totalSupply": 15,

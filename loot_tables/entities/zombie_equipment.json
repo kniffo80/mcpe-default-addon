@@ -60,23 +60,23 @@
       "entries": [
         {
           "type": "loot_table",
-          "name": "loot_tables\/entities\/armor_set_leather.json"
+          "name": "loot_tables/entities/armor_set_leather.json"
         },
         {
           "type": "loot_table",
-          "name": "loot_tables\/entities\/armor_set_gold.json"
+          "name": "loot_tables/entities/armor_set_gold.json"
         },
         {
           "type": "loot_table",
-          "name": "loot_tables\/entities\/armor_set_chain.json"
+          "name": "loot_tables/entities/armor_set_chain.json"
         },
         {
           "type": "loot_table",
-          "name": "loot_tables\/entities\/armor_set_iron.json"
+          "name": "loot_tables/entities/armor_set_iron.json"
         },
         {
           "type": "loot_table",
-          "name": "loot_tables\/entities\/armor_set_diamond.json"
+          "name": "loot_tables/entities/armor_set_diamond.json"
         }
       ]
     }

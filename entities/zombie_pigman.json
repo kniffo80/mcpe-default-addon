@@ -50,10 +50,10 @@
         ]
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/zombie_pigman.json"
+        "table": "loot_tables/entities/zombie_pigman.json"
       },
       "minecraft:equipment": {
-        "table": "loot_tables\/entities\/zombie_pigman_gear.json"
+        "table": "loot_tables/entities/zombie_pigman_gear.json"
       },
       "minecraft:health": {
         "value": 20,

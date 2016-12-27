@@ -54,7 +54,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/enderman.json"
+        "table": "loot_tables/entities/enderman.json"
       },
       "minecraft:health": {
         "value": 40,

@@ -86,7 +86,7 @@
         "breathesWater": true
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/guardian.json"
+        "table": "loot_tables/entities/guardian.json"
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 1,

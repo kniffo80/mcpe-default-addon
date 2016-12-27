@@ -11,7 +11,7 @@
         "height": 0.455
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/boat.json"
+        "table": "loot_tables/entities/boat.json"
       },
       "minecraft:rideable": {
         "seat_count": 2,

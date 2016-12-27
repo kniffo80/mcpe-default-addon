@@ -22,7 +22,7 @@
         "max": 20
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/skeleton.json"
+        "table": "loot_tables/entities/skeleton.json"
       },
       "minecraft:movement": {
         "value": 0.25,
@@ -34,7 +34,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:equipment": {
-        "table": "loot_tables\/entities\/skeleton_gear.json"
+        "table": "loot_tables/entities/skeleton_gear.json"
       },
       "minecraft:behavior.float": {
         "priority": 0

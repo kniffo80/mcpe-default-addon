@@ -19,10 +19,10 @@
         "effect_duration": 10
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/wither_skeleton.json"
+        "table": "loot_tables/entities/wither_skeleton.json"
       },
       "minecraft:equipment": {
-        "table": "loot_tables\/entities\/wither_skeleton_gear.json"
+        "table": "loot_tables/entities/wither_skeleton_gear.json"
       },
       "minecraft:movement": {
         "value": 0.25,

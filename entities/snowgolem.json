@@ -27,7 +27,7 @@
         "height": 1.8
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/snowman.json"
+        "table": "loot_tables/entities/snowman.json"
       },
       "minecraft:health": {
         "value": 4,

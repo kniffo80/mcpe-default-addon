@@ -12,7 +12,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/elder_guardian.json"
+        "table": "loot_tables/entities/elder_guardian.json"
       },
       "minecraft:health": {
         "value": 80,

@@ -6,7 +6,7 @@
         "id": "minecraft:blaze"
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/blaze.json"
+        "table": "loot_tables/entities/blaze.json"
       },
       "minecraft:collision_box": {
         "width": 0.5,

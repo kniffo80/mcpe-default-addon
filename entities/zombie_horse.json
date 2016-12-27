@@ -28,7 +28,7 @@
         "max": 15
       },
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/zombie_horse.json"
+        "table": "loot_tables/entities/zombie_horse.json"
       },
       "minecraft:movement": {
         "value": 0.2

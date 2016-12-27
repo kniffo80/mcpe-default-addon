@@ -21,7 +21,7 @@
       },
       "minecraft:ocelot_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/ocelot.json"
+          "table": "loot_tables/entities/ocelot.json"
         },
         "minecraft:scale": {
           "value": 1

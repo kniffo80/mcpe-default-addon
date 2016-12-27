@@ -22,7 +22,7 @@
       },
       "minecraft:cow_adult": {
         "minecraft:loot": {
-          "table": "loot_tables\/entities\/cow.json"
+          "table": "loot_tables/entities/cow.json"
         },
         "minecraft:behavior.breed": {
           "priority": 3,

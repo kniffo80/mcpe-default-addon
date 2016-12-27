@@ -63,7 +63,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/magma_cube.json"
+        "table": "loot_tables/entities/magma_cube.json"
       },
       "minecraft:fire_immune": true,
       "minecraft:burns_in_daylight": false,

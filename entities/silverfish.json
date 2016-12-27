@@ -39,7 +39,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:loot": {
-        "table": "loot_tables\/entities\/silverfish.json"
+        "table": "loot_tables/entities/silverfish.json"
       },
       "minecraft:health": {
         "value": 8,
