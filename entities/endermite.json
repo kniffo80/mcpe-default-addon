@@ -41,7 +41,7 @@
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 5,
-        "within_radius": 8,
+        "within_radius": 16,
         "entity_types": [
           {
             "filters": {
@@ -50,7 +50,7 @@
                 "enderman"
               ]
             },
-            "max_dist": 8
+            "max_dist": 16
           }
         ]
       },

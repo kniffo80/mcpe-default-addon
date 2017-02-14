@@ -120,6 +120,10 @@
         },
         "minecraft:variant": {
           "value": 0
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.farmer",
+          "table": "trading/farmer_trades.json"
         }
       },
       "fisherman": {
@@ -132,6 +136,10 @@
         },
         "minecraft:variant": {
           "value": 0
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.fisherman",
+          "table": "trading/fisherman_trades.json"
         }
       },
       "shepherd": {
@@ -144,6 +152,10 @@
         },
         "minecraft:variant": {
           "value": 0
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.shepherd",
+          "table": "trading/shepherd_trades.json"
         }
       },
       "fletcher": {
@@ -156,6 +168,10 @@
         },
         "minecraft:variant": {
           "value": 0
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.fletcher",
+          "table": "trading/fletcher_trades.json"
         }
       },
       "librarian": {
@@ -167,6 +183,10 @@
         },
         "minecraft:variant": {
           "value": 1
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.librarian",
+          "table": "trading/librarian_trades.json"
         }
       },
       "cleric": {
@@ -179,6 +199,10 @@
         },
         "minecraft:variant": {
           "value": 2
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.cleric",
+          "table": "trading/cleric_trades.json"
         }
       },
       "armorer": {
@@ -191,6 +215,10 @@
         },
         "minecraft:variant": {
           "value": 3
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.armor",
+          "table": "trading/armorer_trades.json"
         }
       },
       "weaponsmith": {
@@ -203,6 +231,10 @@
         },
         "minecraft:variant": {
           "value": 3
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.weapon",
+          "table": "trading/weapon_smith_trades.json"
         }
       },
       "toolsmith": {
@@ -215,6 +247,10 @@
         },
         "minecraft:variant": {
           "value": 3
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.tool",
+          "table": "trading/tool_smith_trades.json"
         }
       },
       "butcher": {
@@ -227,6 +263,10 @@
         },
         "minecraft:variant": {
           "value": 4
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.butcher",
+          "table": "trading/butcher_trades.json"
         }
       },
       "leatherworker": {
@@ -239,6 +279,10 @@
         },
         "minecraft:variant": {
           "value": 4
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.Villager.leather",
+          "table": "trading/leather_worker_trades.json"
         }
       },
       "baby": {
@@ -324,12 +368,18 @@
       "minecraft:behavior.float": {
         "priority": 0
       },
+      "minecraft:behavior.trade_with_player": {
+        "priority": 1
+      },
+      "minecraft:behavior.look_at_trading_player": {
+        "priority": 2
+      },
       "minecraft:behavior.panic": {
-        "priority": 1,
-        "speed_multiplier": 0.8
+        "priority": 3,
+        "speed_multiplier": 0.6
       },
       "minecraft:behavior.avoid_mob_type": {
-        "priority": 1,
+        "priority": 3,
         "entity_types": [
           {
             "filters": {
@@ -346,22 +396,22 @@
         ]
       },
       "minecraft:behavior.move_indoors": {
-        "priority": 2,
+        "priority": 4,
         "speed_multiplier": 0.8
       },
       "minecraft:behavior.restrict_open_door": {
-        "priority": 3
+        "priority": 5
       },
       "minecraft:behavior.open_door": {
-        "priority": 4,
+        "priority": 6,
         "close_door_after": true
       },
       "minecraft:behavior.move_towards_restriction": {
-        "priority": 5,
+        "priority": 7,
         "speed_multiplier": 0.6
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 7,
+        "priority": 9,
         "items": [
           "minecraft:bread",
           "minecraft:carrots",
@@ -372,11 +422,11 @@
         ]
       },
       "minecraft:behavior.random_stroll": {
-        "priority": 9,
+        "priority": 11,
         "speed_multiplier": 0.6
       },
       "minecraft:behavior.look_at_player": {
-        "priority": 10,
+        "priority": 12,
         "look_distance": 8,
         "probability": 0.02
       }
@@ -400,7 +450,7 @@
         "sequence": [
           {
             "filters": {
-              "other_without_components": "minecraft:variant"
+              "self_without_components": "minecraft:variant"
             },
             "randomize": [
               {
@@ -423,7 +473,7 @@
           },
           {
             "filters": {
-              "other_without_components": "minecraft:variant"
+              "self_without_components": "minecraft:variant"
             },
             "randomize": [
               {
@@ -792,7 +842,13 @@
         "add": {
           "component_groups": [
             "farmer",
+            "adult",
             "behavior_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       },
@@ -800,7 +856,13 @@
         "add": {
           "component_groups": [
             "librarian",
+            "adult",
             "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       },
@@ -808,7 +870,13 @@
         "add": {
           "component_groups": [
             "cleric",
+            "adult",
             "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       },
@@ -816,7 +884,13 @@
         "add": {
           "component_groups": [
             "armorer",
+            "adult",
             "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       },
@@ -824,7 +898,13 @@
         "add": {
           "component_groups": [
             "butcher",
+            "adult",
             "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       },
@@ -848,7 +928,13 @@
         "add": {
           "component_groups": [
             "cleric",
+            "adult",
             "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
           ]
         }
       }

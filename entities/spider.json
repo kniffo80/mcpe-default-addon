@@ -20,6 +20,42 @@
           }
         }
       },
+      "minecraft:spider_stray_jockey": {
+        "minecraft:addrider": {
+          "entity_type": "minecraft:skeleton.stray"
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "skeleton"
+          ],
+          "seats": {
+            "position": [
+              0,
+              0.54,
+              0
+            ]
+          }
+        }
+      },
+      "minecraft:spider_wither_jockey": {
+        "minecraft:addrider": {
+          "entity_type": "minecraft:skeleton.wither"
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "skeleton"
+          ],
+          "seats": {
+            "position": [
+              0,
+              0.54,
+              0
+            ]
+          }
+        }
+      },
       "minecraft:spider_neutral": {
         "minecraft:environment_sensor": {
           "on_environment": {
@@ -160,19 +196,58 @@
         "randomize": [
           {
             "weight": 1,
-            "filters": {
-              "with_environment_any": [
-                "night",
-                "underground"
-              ]
-            },
-            "remove": {},
-            "add": {
-              "component_groups": [
-                "minecraft:spider_jockey",
-                "minecraft:spider_neutral"
-              ]
-            }
+            "randomize": [
+              {
+                "weight": 80,
+                "filters": {
+                  "with_environment_every": [
+                    "night",
+                    "biome:snow_covered"
+                  ],
+                  "without_environment_every": [
+                    "underground"
+                  ]
+                },
+                "remove": {},
+                "add": {
+                  "component_groups": [
+                    "minecraft:spider_stray_jockey",
+                    "minecraft:spider_neutral"
+                  ]
+                }
+              },
+              {
+                "weight": 80,
+                "filters": {
+                  "with_environment_any": [
+                    "biome:the_nether"
+                  ]
+                },
+                "remove": {},
+                "add": {
+                  "component_groups": [
+                    "minecraft:spider_wither_jockey",
+                    "minecraft:spider_neutral"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "filters": {
+                  "with_environment_any": [
+                    "night",
+                    "underground"
+                  ]
+                },
+                "remove": {},
+                "add": {
+                  "component_groups": [
+                    "minecraft:spider_jockey",
+                    "minecraft:spider_neutral"
+                  ]
+                }
+              }
+            ]
           },
           {
             "weight": 99,

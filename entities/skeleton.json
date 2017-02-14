@@ -79,6 +79,19 @@
         "priority": 2,
         "speed_multiplier": 1
       },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 4,
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": "wolf"
+            },
+            "max_dist": 6,
+            "walk_speed_multiplier": 1.2,
+            "sprint_speed_multiplier": 1.2
+          }
+        ]
+      },
       "minecraft:behavior.ranged_attack": {
         "attack_interval_min": 1,
         "attack_interval_max": 3,

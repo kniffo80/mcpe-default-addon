@@ -52,7 +52,8 @@
         "isdangerous": true,
         "inertia": 1,
         "liquid_inertia": 1,
-        "shoottarget": false
+        "shoottarget": false,
+        "reflectOnHurt": true
       }
     },
     "events": {

@@ -211,11 +211,6 @@
           "speed_multiplier": 1
         }
       },
-      "minecraft:horse_transformed": {
-        "minecraft:transformation": {
-          "into": "minecraft:donkey"
-        }
-      },
       "minecraft:horse_saddled": {
         "minecraft:is_saddled": {}
       }
@@ -351,17 +346,6 @@
             "add": {
               "component_groups": [
                 "minecraft:horse_baby"
-              ]
-            }
-          },
-          {
-            "weight": 5,
-            "filters": {
-              "other_without_families": "player"
-            },
-            "add": {
-              "component_groups": [
-                "minecraft:horse_transformed"
               ]
             }
           }

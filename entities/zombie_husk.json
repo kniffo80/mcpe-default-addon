@@ -5,7 +5,7 @@
       "minecraft:zombie_husk_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value": 0.5
+          "value": 0.53125
         },
         "minecraft:movement": {
           "value": 0.35,
@@ -25,8 +25,8 @@
           "seats": {
             "position": [
               0,
-              0.9,
-              -0.25
+              1.1,
+              -0.35
             ],
             "lock_rider_rotation": 0
           }
@@ -36,6 +36,9 @@
           "speed_multiplier": 1.25,
           "target_dist": 0,
           "track_target": true
+        },
+        "minecraft:scale": {
+          "value": 1.0625
         }
       },
       "minecraft:zombie_husk_jockey": {
@@ -61,6 +64,7 @@
       "minecraft:type_family": {
         "family": [
           "husk",
+          "zombie",
           "undead",
           "monster"
         ]

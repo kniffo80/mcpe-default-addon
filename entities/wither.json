@@ -74,6 +74,7 @@
       "minecraft:type_family": {
         "family": [
           "wither",
+          "skeleton",
           "monster",
           "undead"
         ]
