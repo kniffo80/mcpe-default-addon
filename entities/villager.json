@@ -14,49 +14,32 @@
         }
       },
       "behavior_peasant": {
-        "minecraft:behavior.share_items": {
-          "priority": 8,
-          "filters": {
-            "other_with_families": "villager"
-          },
-          "target_entity_items": [
+        "minecraft:shareables": {
+          "items": [
             {
-              "max_count": 3,
-              "item": "minecraft:bread"
+              "item": "minecraft:bread",
+              "want_amount": 3,
+              "surplus_amount": 6
             },
             {
-              "max_count": 12,
-              "item": "minecraft:carrot"
+              "item": "minecraft:carrot",
+              "want_amount": 60,
+              "surplus_amount": 4
             },
             {
-              "max_count": 12,
-              "item": "minecraft:potato"
+              "item": "minecraft:potato",
+              "want_amount": 60,
+              "surplus_amount": 24
             },
             {
-              "max_count": 12,
-              "item": "minecraft:beetroot"
-            }
-          ],
-          "items_filter": [
-            {
-              "min_count": 6,
-              "item": "minecraft:bread"
+              "item": "minecraft:beetroot",
+              "want_amount": 60,
+              "surplus_amount": 24
             },
             {
-              "min_count": 24,
-              "item": "minecraft:carrot"
-            },
-            {
-              "min_count": 24,
-              "item": "minecraft:potato"
-            },
-            {
-              "min_count": 24,
-              "item": "minecraft:beetroot"
-            },
-            {
-              "min_count": 18,
               "item": "minecraft:wheat",
+              "want_amount": 45,
+              "surplus_amount": 18,
               "craft_into": "minecraft:bread"
             }
           ]
@@ -67,45 +50,27 @@
         }
       },
       "behavior_non_peasant": {
-        "minecraft:behavior.share_items": {
-          "priority": 8,
-          "filters": {
-            "other_with_families": "villager"
-          },
-          "target_entity_items": [
+        "minecraft:shareables": {
+          "items": [
             {
-              "max_count": 3,
-              "item": "minecraft:bread"
+              "item": "minecraft:bread",
+              "want_amount": 3,
+              "surplus_amount": 6
             },
             {
-              "max_count": 12,
-              "item": "minecraft:carrot"
+              "item": "minecraft:carrot",
+              "want_amount": 12,
+              "surplus_amount": 24
             },
             {
-              "max_count": 12,
-              "item": "minecraft:potato"
+              "item": "minecraft:potato",
+              "want_amount": 12,
+              "surplus_amount": 24
             },
             {
-              "max_count": 12,
-              "item": "minecraft:beetroot"
-            }
-          ],
-          "items_filter": [
-            {
-              "min_count": 6,
-              "item": "minecraft:bread"
-            },
-            {
-              "min_count": 24,
-              "item": "minecraft:carrot"
-            },
-            {
-              "min_count": 24,
-              "item": "minecraft:potato"
-            },
-            {
-              "min_count": 24,
-              "item": "minecraft:beetroot"
+              "item": "minecraft:beetroot",
+              "want_amount": 12,
+              "surplus_amount": 24
             }
           ]
         }
@@ -410,16 +375,26 @@
         "priority": 7,
         "speed_multiplier": 0.6
       },
+      "minecraft:behavior.share_items": {
+        "priority": 8,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 0.5,
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": [
+                "villager"
+              ]
+            }
+          }
+        ]
+      },
       "minecraft:behavior.pickup_items": {
         "priority": 9,
-        "items": [
-          "minecraft:bread",
-          "minecraft:carrots",
-          "minecraft:potatoes",
-          "minecraft:wheat",
-          "minecraft:beetroot",
-          "minecraft:beetroot_seeds"
-        ]
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 0.5
       },
       "minecraft:behavior.random_stroll": {
         "priority": 11,
@@ -450,7 +425,7 @@
         "sequence": [
           {
             "filters": {
-              "self_without_components": "minecraft:variant"
+              "without_components": "minecraft:variant"
             },
             "randomize": [
               {
@@ -473,7 +448,7 @@
           },
           {
             "filters": {
-              "self_without_components": "minecraft:variant"
+              "without_components": "minecraft:variant"
             },
             "randomize": [
               {
