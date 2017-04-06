@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:primed_tnt": {
         "minecraft:explode": {
@@ -51,7 +51,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:minecarttnt"
+        "id": "minecraft:tnt_minecart"
       },
       "minecraft:type_family": {
         "family": [
@@ -63,9 +63,7 @@
         "height": 0.7
       },
       "minecraft:rail_movement": {},
-      "minecraft:is_stackable": {
-        "value": true
-      }
+      "minecraft:is_stackable": {}
     },
     "events": {
       "minecraft:entity_spawned": {

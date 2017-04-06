@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:spider_jockey": {
         "minecraft:addrider": {
@@ -145,16 +145,38 @@
           "random_stop_interval": 100,
           "reach_multiplier": 1.4
         }
+      },
+      "minecraft:spider_poison_easy": {
+        "minecraft:attack": {
+          "damage": 2,
+          "effect_name": "poison",
+          "effect_duration": 0
+        }
+      },
+      "minecraft:spider_poison_normal": {
+        "minecraft:attack": {
+          "damage": 2,
+          "effect_name": "poison",
+          "effect_duration": 7
+        }
+      },
+      "minecraft:spider_poison_hard": {
+        "minecraft:attack": {
+          "damage": 2,
+          "effect_name": "poison",
+          "effect_duration": 15
+        }
       }
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:cavespider"
+        "id": "minecraft:cave_spider"
       },
       "minecraft:type_family": {
         "family": [
           "cavespider",
-          "monster"
+          "monster",
+          "arthropod"
         ]
       },
       "minecraft:breathable": {
@@ -176,11 +198,12 @@
       "minecraft:movement": {
         "value": 0.3
       },
-      "minecraft:attack": {
-        "damage": 2,
-        "effect_name": "poison",
-        "effect_duration": 7
+      "minecraft:navigation.climb": {
+        "can_float": true
       },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:behavior.float": {
         "priority": 1
       },
@@ -289,16 +312,68 @@
         ]
       },
       "minecraft:become_hostile": {
-        "remove": {
-          "component_groups": [
-            "minecraft:spider_neutral"
-          ]
-        },
-        "add": {
-          "component_groups": [
-            "minecraft:spider_hostile"
-          ]
-        }
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_neutral"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_hostile"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "easy"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_hard",
+                "minecraft:spider_poison_normal"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_easy"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "normal"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_easy",
+                "minecraft:spider_poison_hard"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_normal"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "hard"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_easy",
+                "minecraft:spider_poison_normal"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_hard"
+              ]
+            }
+          }
+        ]
       },
       "minecraft:become_neutral": {
         "remove": {
@@ -313,16 +388,68 @@
         }
       },
       "minecraft:become_angry": {
-        "remove": {
-          "component_groups": [
-            "minecraft:spider_neutral"
-          ]
-        },
-        "add": {
-          "component_groups": [
-            "minecraft:spider_angry"
-          ]
-        }
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_neutral"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_angry"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "easy"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_hard",
+                "minecraft:spider_poison_normal"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_easy"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "normal"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_easy",
+                "minecraft:spider_poison_hard"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_normal"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "hard"
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:spider_poison_easy",
+                "minecraft:spider_poison_normal"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:spider_poison_hard"
+              ]
+            }
+          }
+        ]
       },
       "minecraft:on_calm": {
         "remove": {

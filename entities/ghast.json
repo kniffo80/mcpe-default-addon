@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:ghast"
@@ -19,12 +19,23 @@
         "width": 4,
         "height": 4
       },
+      "minecraft:movement": {
+        "value": 0.1,
+        "max": 0.1
+      },
+      "minecraft:navigation.float": {
+        "can_float": true
+      },
+      "minecraft:float_wander": {
+        "priority": 2
+      },
+      "minecraft:can_fly": {},
       "minecraft:loot": {
         "table": "loot_tables/entities/ghast.json"
       },
       "minecraft:shooter": {
         "type": "largefireball",
-        "def": "minecraft:fireball.large"
+        "def": "minecraft:fireball"
       },
       "minecraft:type_family": {
         "family": [
@@ -36,6 +47,7 @@
         "value": 0
       },
       "minecraft:behavior.ranged_attack": {
+        "priority": 1,
         "attack_radius": 64,
         "charge_shoot_trigger": 2,
         "charge_charged_trigger": 1

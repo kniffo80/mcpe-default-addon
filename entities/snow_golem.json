@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:snowgolem_leashed": {
         "minecraft:behavior.move_towards_restriction": {
@@ -14,7 +14,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:snowgolem"
+        "id": "minecraft:snow_golem"
       },
       "minecraft:type_family": {
         "family": [
@@ -40,6 +40,12 @@
       "minecraft:movement": {
         "value": 0.2
       },
+      "minecraft:navigation.walk": {
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:attack": {
         "damage": 2
       },

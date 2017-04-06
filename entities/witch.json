@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:witch"
@@ -20,6 +20,13 @@
       "minecraft:movement": {
         "value": 0.25
       },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": false
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:behavior.float": {
         "priority": 1
       },

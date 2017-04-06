@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:chicken_baby": {
         "minecraft:is_baby": {},
@@ -62,6 +62,12 @@
               0
             ]
           }
+        },
+        "minecraft:spawn_entity": {
+          "min_wait_time": 300,
+          "max_wait_time": 600,
+          "spawn_sound": "plop",
+          "spawn_item": "egg"
         }
       },
       "minecraft:chicken_leashed": {
@@ -94,7 +100,8 @@
         "max": 4
       },
       "minecraft:movement": {
-        "value": 0.25
+        "value": 0.25,
+        "max": 0.5
       },
       "minecraft:fall_damage": {
         "value": 0
@@ -112,6 +119,12 @@
           "target": "self"
         }
       },
+      "minecraft:navigation.walk": {
+        "can_float": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -121,7 +134,7 @@
       },
       "minecraft:behavior.mount_pathing": {
         "priority": 2,
-        "speed_multiplier": 1,
+        "speed_multiplier": 1.5,
         "target_dist": 0,
         "track_target": true
       },

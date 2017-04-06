@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:slime_large": {
         "minecraft:collision_box": {
@@ -55,11 +55,27 @@
         "minecraft:attack": {
           "damage": 2
         }
+      },
+      "minecraft:slime_calm": {
+        "minecraft:movement.jump": {
+          "jump_delay": [
+            0.5,
+            1.5
+          ]
+        }
+      },
+      "minecraft:slime_aggressive": {
+        "minecraft:movement.jump": {
+          "jump_delay": [
+            0.16,
+            0.5
+          ]
+        }
       }
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:magmacube"
+        "id": "minecraft:magma_cube"
       },
       "minecraft:type_family": {
         "family": [
@@ -72,6 +88,26 @@
       "minecraft:burns_in_daylight": false,
       "minecraft:fall_damage": {
         "value": 0
+      },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true
+      },
+      "minecraft:jump.static": {},
+      "minecraft:movement.jump": {
+        "jump_delay": [
+          0.5,
+          1.5
+        ]
+      },
+      "minecraft:can_climb": {},
+      "minecraft:on_target_acquired": {
+        "event": "minecraft:become_aggressive",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "minecraft:become_calm",
+        "target": "self"
       },
       "minecraft:behavior.slime_float": {
         "priority": 1
@@ -97,6 +133,28 @@
         ]
       }
     },
-    "events": {}
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "minecraft:slime_calm"
+          ]
+        }
+      },
+      "minecraft:become_calm": {
+        "add": {
+          "component_groups": [
+            "minecraft:slime_calm"
+          ]
+        }
+      },
+      "minecraft:become_aggressive": {
+        "add": {
+          "component_groups": [
+            "minecraft:slime_aggressive"
+          ]
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "become_witch": {
         "minecraft:transformation": {
@@ -87,7 +87,7 @@
           "value": 0
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.farmer",
+          "display_name": "entity.villager.farmer",
           "table": "trading/farmer_trades.json"
         }
       },
@@ -103,7 +103,7 @@
           "value": 0
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.fisherman",
+          "display_name": "entity.villager.fisherman",
           "table": "trading/fisherman_trades.json"
         }
       },
@@ -119,7 +119,7 @@
           "value": 0
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.shepherd",
+          "display_name": "entity.villager.shepherd",
           "table": "trading/shepherd_trades.json"
         }
       },
@@ -135,7 +135,7 @@
           "value": 0
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.fletcher",
+          "display_name": "entity.villager.fletcher",
           "table": "trading/fletcher_trades.json"
         }
       },
@@ -150,7 +150,7 @@
           "value": 1
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.librarian",
+          "display_name": "entity.villager.librarian",
           "table": "trading/librarian_trades.json"
         }
       },
@@ -166,7 +166,7 @@
           "value": 2
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.cleric",
+          "display_name": "entity.villager.cleric",
           "table": "trading/cleric_trades.json"
         }
       },
@@ -182,7 +182,7 @@
           "value": 3
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.armor",
+          "display_name": "entity.villager.armor",
           "table": "trading/armorer_trades.json"
         }
       },
@@ -198,7 +198,7 @@
           "value": 3
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.weapon",
+          "display_name": "entity.villager.weapon",
           "table": "trading/weapon_smith_trades.json"
         }
       },
@@ -214,7 +214,7 @@
           "value": 3
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.tool",
+          "display_name": "entity.villager.tool",
           "table": "trading/tool_smith_trades.json"
         }
       },
@@ -230,7 +230,7 @@
           "value": 4
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.butcher",
+          "display_name": "entity.villager.butcher",
           "table": "trading/butcher_trades.json"
         }
       },
@@ -246,7 +246,7 @@
           "value": 4
         },
         "minecraft:trade_table": {
-          "display_name": "entity.Villager.leather",
+          "display_name": "entity.villager.leather",
           "table": "trading/leather_worker_trades.json"
         }
       },
@@ -303,6 +303,15 @@
         "value": 0.5,
         "max": 0.5
       },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:inventory": {
         "inventory_size": 8,
         "private": true
@@ -415,11 +424,36 @@
         }
       },
       "become_zombie": {
-        "add": {
-          "component_groups": [
-            "become_zombie"
-          ]
-        }
+        "sequence": [
+          {
+            "filters": {
+              "is_world_difficulty": "normal"
+            },
+            "randomize": [
+              {
+                "weight": 50,
+                "add": {
+                  "component_groups": [
+                    "become_zombie"
+                  ]
+                }
+              },
+              {
+                "weight": 50
+              }
+            ]
+          },
+          {
+            "filters": {
+              "is_world_difficulty": "hard"
+            },
+            "add": {
+              "component_groups": [
+                "become_zombie"
+              ]
+            }
+          }
+        ]
       },
       "minecraft:entity_spawned": {
         "sequence": [

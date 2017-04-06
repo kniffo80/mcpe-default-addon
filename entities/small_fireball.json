@@ -1,9 +1,9 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:fireball.small"
+        "id": "minecraft:small_fireball"
       },
       "minecraft:collision_box": {
         "width": 0.31,
@@ -17,7 +17,9 @@
             "catchFire": true,
             "semirandomdiffdamage": true
           },
-          "catch_fire": {},
+          "catch_fire": {
+            "fireAffectedByGriefing": true
+          },
           "remove_on_hit": {}
         },
         "power": 1.3,

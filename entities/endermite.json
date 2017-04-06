@@ -24,6 +24,12 @@
       "minecraft:movement": {
         "value": 0.25
       },
+      "minecraft:navigation.walk": {
+        "can_float": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:health": {
         "value": 8,
         "max": 8

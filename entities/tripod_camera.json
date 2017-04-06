@@ -1,9 +1,9 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:tripodcamera"
+        "id": "minecraft:tripod_camera"
       },
       "minecraft:type_family": {
         "family": [

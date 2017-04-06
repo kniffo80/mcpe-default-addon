@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:donkey_baby": {
         "minecraft:is_baby": {},
@@ -144,7 +144,11 @@
         "minecraft:equippable": {
           "slots": [
             {
+              "slot": 0,
               "item": "saddle",
+              "accepted_items": [
+                "saddle"
+              ],
               "on_equip": {
                 "event": "minecraft:donkey_saddled"
               },
@@ -198,6 +202,22 @@
             "golden_apple",
             "appleEnchanted"
           ]
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "items": [
+            "apple",
+            "carrot",
+            "golden_apple",
+            "appleEnchanted",
+            "golden_carrot",
+            "carrotOnAStick",
+            "tile.hay_block",
+            "sugar",
+            "bread",
+            "wheat"
+          ]
         }
       },
       "minecraft:donkey_unchested": {
@@ -220,7 +240,9 @@
         "minecraft:is_chested": {}
       },
       "minecraft:donkey_saddled": {
-        "minecraft:is_saddled": {}
+        "minecraft:is_saddled": {},
+        "minecraft:input_ground_controlled": {},
+        "minecraft:can_power_jump": {}
       },
       "minecraft:donkey_leashed": {
         "minecraft:behavior.move_towards_restriction": {
@@ -255,6 +277,12 @@
       "minecraft:movement": {
         "value": 0.175
       },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
       "minecraft:nameable": {},
       "minecraft:horse.jump_strength": {
         "value": 0.5
@@ -310,22 +338,6 @@
       "minecraft:behavior.panic": {
         "priority": 1,
         "speed_multiplier": 1.2
-      },
-      "minecraft:behavior.tempt": {
-        "priority": 5,
-        "speed_multiplier": 1.2,
-        "items": [
-          "apple",
-          "carrot",
-          "golden_apple",
-          "appleEnchanted",
-          "golden_carrot",
-          "carrotOnAStick",
-          "tile.hay_block",
-          "sugar",
-          "bread",
-          "wheat"
-        ]
       },
       "minecraft:behavior.random_stroll": {
         "priority": 6,

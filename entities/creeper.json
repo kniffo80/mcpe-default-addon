@@ -1,13 +1,14 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:exploding": {
         "minecraft:explode": {
           "fuseLength": 1.5,
           "fuseLit": true,
           "power": 3,
-          "causesFire": false
+          "causesFire": false,
+          "destroyAffectedByGriefing": true
         }
       },
       "minecraft:hunting": {},
@@ -19,7 +20,8 @@
           "fuseLength": 1.5,
           "fuseLit": true,
           "power": 6,
-          "causesFire": false
+          "causesFire": false,
+          "destroyAffectedByGriefing": true
         }
       }
     },
@@ -46,6 +48,12 @@
         "value": 0.2,
         "max": 0.2
       },
+      "minecraft:navigation.walk": {
+        "can_float": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:loot": {
         "table": "loot_tables/entities/creeper.json"
       },
@@ -143,10 +151,6 @@
         ],
         "must_see": true,
         "must_see_forget_duration": 0
-      },
-      "minecraft:on_target_escape": {
-        "event": "minecraft:stop_exploding",
-        "target": "self"
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 2

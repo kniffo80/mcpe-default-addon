@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "version": 1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:hard_arrow": {
         "minecraft:projectile": {
@@ -44,7 +44,7 @@
             "arrow_effect": {}
           },
           "hitSound": "bow.hit",
-          "power": 1.6,
+          "power": 5,
           "gravity": 0.05,
           "uncertaintyBase": 16,
           "uncertaintyMultiplier": 4,
@@ -60,7 +60,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:arrow.skeleton"
+        "id": "minecraft:arrow"
       },
       "minecraft:collision_box": {
         "width": 0.5,

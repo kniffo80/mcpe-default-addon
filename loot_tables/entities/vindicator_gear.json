@@ -5,22 +5,19 @@
       "entries": [
         {
           "type": "item",
-          "name": "minecraft:rotten_flesh",
+          "name": "minecraft:iron_axe",
           "weight": 1,
           "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 2
-              }
-            },
             {
               "function": "looting_enchant",
               "count": {
                 "min": 0,
                 "max": 1
               }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.25
             }
           ]
         }

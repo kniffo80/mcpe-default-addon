@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:mooshroom_become_cow": {
         "minecraft:transformation": {
@@ -37,8 +37,8 @@
           "requireTame": false,
           "breedItems": "wheat",
           "breedsWith": {
-            "mateType": "minecraft:mushroomcow",
-            "babyType": "minecraft:mushroomcow",
+            "mateType": "minecraft:mooshroom",
+            "babyType": "minecraft:mooshroom",
             "breed_event": {
               "event": "minecraft:entity_born",
               "target": "baby"
@@ -70,13 +70,9 @@
             "use_item": false,
             "hurt_item": 1,
             "play_sounds": "shear",
-            "spawn_items": [
-              "red_mushroom",
-              "red_mushroom",
-              "red_mushroom",
-              "red_mushroom",
-              "red_mushroom"
-            ],
+            "spawn_items": {
+              "table": "loot_tables/entities/mooshroom_shear.json"
+            },
             "interact_text": "action.interact.mooshear"
           },
           {
@@ -102,7 +98,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:mushroomcow"
+        "id": "minecraft:mooshroom"
       },
       "minecraft:type_family": {
         "family": [
@@ -126,6 +122,13 @@
         "value": 0.25,
         "max": 0.5
       },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:leashable": {
         "soft_distance": 4,
         "hard_distance": 6,

@@ -1,9 +1,9 @@
 {
   "minecraft:entity": {
-    "version": 1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:fireball.dragon"
+        "id": "minecraft:dragon_fireball"
       },
       "minecraft:collision_box": {
         "width": 0.31,
@@ -37,7 +37,8 @@
         ],
         "semirandomdiffdamage": true,
         "uncertaintyBase": 10,
-        "reflectOnHurt": true
+        "reflectOnHurt": true,
+        "hitSound": "explode"
       }
     }
   }

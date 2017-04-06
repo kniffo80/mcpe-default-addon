@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:zombie_horse_leashed": {
         "minecraft:behavior.move_towards_restriction": {
@@ -11,7 +11,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:zombiehorse"
+        "id": "minecraft:zombie_horse"
       },
       "minecraft:type_family": {
         "family": [
@@ -37,6 +37,12 @@
       "minecraft:movement": {
         "value": 0.2
       },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
       "minecraft:nameable": {},
       "minecraft:is_tamed": {},
       "minecraft:horse.jump_strength": {

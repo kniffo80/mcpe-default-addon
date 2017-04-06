@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "components": {
       "minecraft:damage_sensor": [
         {
@@ -16,6 +16,7 @@
           "npc"
         ]
       },
+      "minecraft:fire_immune": true,
       "minecraft:health": {
         "value": 20,
         "max": 20,

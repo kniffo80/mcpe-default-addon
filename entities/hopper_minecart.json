@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:hopper_active": {
         "minecraft:item_hopper": {},
@@ -20,7 +20,7 @@
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:minecarthopper"
+        "id": "minecraft:hopper_minecart"
       },
       "minecraft:type_family": {
         "family": [
@@ -37,9 +37,7 @@
         "inventory_size": 5,
         "can_be_siphoned_from": true
       },
-      "minecraft:is_stackable": {
-        "value": true
-      }
+      "minecraft:is_stackable": {}
     },
     "events": {
       "minecraft:entity_spawned": {

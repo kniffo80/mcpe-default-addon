@@ -1,0 +1,150 @@
+{
+  "minecraft:entity": {
+    "format_version": "1.1.0",
+    "components": {
+      "minecraft:identifier": {
+        "id": "minecraft:evocation_illager"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "evocation_illager",
+          "monster",
+          "illager"
+        ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:caster": {},
+      "minecraft:nameable": {},
+      "minecraft:loot": {
+        "table": "loot_tables/entities/evocation_illager.json"
+      },
+      "minecraft:health": {
+        "value": 24,
+        "max": 24
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.95
+      },
+      "minecraft:movement": {
+        "value": 0.5,
+        "max": 0.5
+      },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": "player"
+            },
+            "max_dist": 8,
+            "walk_speed_multiplier": 0.6,
+            "sprint_speed_multiplier": 1
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 8,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": [
+                "player",
+                "irongolem",
+                "snowgolem",
+                "villager"
+              ]
+            },
+            "max_dist": 16
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:behavior.casting_spell_goal": {
+        "priority": 1
+      },
+      "minecraft:behavior.summon_spell_goal": {
+        "priority": 5,
+        "entity_type": "minecraft:vex",
+        "summon_cap": 8,
+        "mobs_per_summon": 3
+      },
+      "minecraft:behavior.attack_spell_goal": {
+        "priority": 4,
+        "attacks": [
+          {
+            "attack_type": "circle",
+            "min_activation_range": 0,
+            "max_activation_range": 5,
+            "summon_type": "minecraft:evocation_fang",
+            "priority": 1,
+            "circles": [
+              {
+                "radius": 1.5,
+                "delay": 1,
+                "num_entities_spawned": 5
+              },
+              {
+                "radius": 2.5,
+                "delay": 3,
+                "num_entities_spawned": 8
+              }
+            ]
+          },
+          {
+            "attack_type": "line",
+            "min_activation_range": 5,
+            "summon_type": "minecraft:evocation_fang",
+            "priority": 2,
+            "range": 16,
+            "base_delay": 1,
+            "delay_between_spawns": 1
+          }
+        ]
+      },
+      "minecraft:behavior.wololo_spell_goal": {
+        "priority": 5,
+        "target_types": [
+          "minecraft:sheep"
+        ],
+        "target_color": "blue",
+        "change_color": "red",
+        "range": 16
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 9,
+        "look_distance": 3,
+        "probability": 1
+      },
+      "minecraft:behavior.look_at_entity": {
+        "priority": 10,
+        "look_distance": 8,
+        "filters": {
+          "other_with_families": "mob"
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      }
+    }
+  }
+}

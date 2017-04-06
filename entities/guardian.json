@@ -1,6 +1,6 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:guardian_aggressive": {
         "minecraft:behavior.nearest_attackable_target": {
@@ -81,6 +81,10 @@
         "value": 16,
         "max": 16
       },
+      "minecraft:navigation.swim": {},
+      "minecraft:movement.sway": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_swim": {},
       "minecraft:breathable": {
         "breathesWater": true
       },

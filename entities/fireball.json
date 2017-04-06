@@ -1,19 +1,21 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
     "component_groups": {
       "minecraft:exploding": {
         "minecraft:explode": {
           "fuseLength": 0,
           "fuseLit": true,
           "power": 1,
-          "causesFire": true
+          "causesFire": true,
+          "fireAffectedByGriefing": true,
+          "destroyAffectedByGriefing": true
         }
       }
     },
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:fireball.large"
+        "id": "minecraft:fireball"
       },
       "minecraft:collision_box": {
         "width": 0.31,
