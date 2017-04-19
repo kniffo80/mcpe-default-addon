@@ -90,7 +90,7 @@
       "minecraft:navigation.walk": {
         "can_float": true,
         "can_pass_doors": true,
-        "can_open_doors": false,
+        "can_open_doors": true,
         "avoid_water": false,
         "avoid_portals": false
       },

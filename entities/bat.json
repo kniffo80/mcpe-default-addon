@@ -30,7 +30,7 @@
         "can_float": true
       },
       "minecraft:movement.basic": {},
-      "minecraft:float_wander": {
+      "minecraft:behavior.float_wander": {
         "xz_dist": 10,
         "y_dist": 7,
         "y_offset": -2

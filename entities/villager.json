@@ -37,6 +37,16 @@
               "surplus_amount": 24
             },
             {
+              "item": "minecraft:wheat_seeds",
+              "want_amount": 64,
+              "surplus_amount": 64
+            },
+            {
+              "item": "minecraft:beetroot_seeds",
+              "want_amount": 64,
+              "surplus_amount": 64
+            },
+            {
               "item": "minecraft:wheat",
               "want_amount": 45,
               "surplus_amount": 18,
@@ -152,6 +162,21 @@
         "minecraft:trade_table": {
           "display_name": "entity.villager.librarian",
           "table": "trading/librarian_trades.json"
+        }
+      },
+      "cartographer": {
+        "minecraft:type_family": {
+          "family": [
+            "villager",
+            "cartographer"
+          ]
+        },
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:trade_table": {
+          "display_name": "entity.villager.cartographer",
+          "table": "trading/cartographer_trades.json"
         }
       },
       "cleric": {
@@ -534,6 +559,15 @@
                 "weight": 20,
                 "add": {
                   "component_groups": [
+                    "cartographer",
+                    "behavior_non_peasant"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "add": {
+                  "component_groups": [
                     "cleric",
                     "behavior_non_peasant"
                   ]
@@ -667,6 +701,17 @@
           },
           {
             "filters": {
+              "other_with_families": "cartographer"
+            },
+            "add": {
+              "component_groups": [
+                "cartographer",
+                "behavior_non_peasant"
+              ]
+            }
+          },
+          {
+            "filters": {
               "other_with_families": "cleric"
             },
             "add": {
@@ -793,6 +838,15 @@
                 "weight": 20,
                 "add": {
                   "component_groups": [
+                    "cartographer",
+                    "behavior_non_peasant"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "add": {
+                  "component_groups": [
                     "cleric",
                     "behavior_non_peasant"
                   ]
@@ -865,6 +919,20 @@
         "add": {
           "component_groups": [
             "librarian",
+            "adult",
+            "behavior_non_peasant"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "baby"
+          ]
+        }
+      },
+      "minecraft:spawn_cartographer": {
+        "add": {
+          "component_groups": [
+            "cartographer",
             "adult",
             "behavior_non_peasant"
           ]

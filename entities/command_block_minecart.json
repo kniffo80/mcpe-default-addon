@@ -41,15 +41,7 @@
         "height": 0.9
       },
       "minecraft:rail_movement": {},
-      "minecraft:inventory": {
-        "container_type": "minecart_command_block",
-        "inventory_size": 1
-      },
-      "minecraft:item_command_block": {
-        "ticks_per_command": 4,
-        "current_tick_count": 0,
-        "ticking": false
-      }
+      "minecraft:inventory": {}
     },
     "events": {
       "minecraft:entity_spawned": {

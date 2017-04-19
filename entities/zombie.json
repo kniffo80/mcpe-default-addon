@@ -53,7 +53,8 @@
       },
       "minecraft:navigation.walk": {
         "can_float": true,
-        "can_pass_doors": true
+        "can_pass_doors": true,
+        "can_open_doors": true
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},

@@ -16,7 +16,6 @@
         "totalSupply": 15,
         "suffocateTime": 0
       },
-      "minecraft:caster": {},
       "minecraft:nameable": {},
       "minecraft:loot": {
         "table": "loot_tables/entities/evocation_illager.json"
@@ -45,8 +44,103 @@
       "minecraft:behavior.float": {
         "priority": 0
       },
-      "minecraft:behavior.avoid_mob_type": {
+      "minecraft:behavior.summon_entity": {
         "priority": 2,
+        "summon_choices": [
+          {
+            "min_activation_range": 0,
+            "max_activation_range": 4,
+            "cooldown_time": 5,
+            "weight": 3,
+            "cast_duration": 2,
+            "particle_color": "#FF664D59",
+            "sequence": [
+              {
+                "shape": "circle",
+                "target": "self",
+                "base_delay": 1,
+                "delay_per_summon": 0,
+                "num_entities_spawned": 5,
+                "entity_type": "minecraft:evocation_fang",
+                "size": 1.5,
+                "entity_lifespan": 1.1
+              },
+              {
+                "shape": "circle",
+                "target": "self",
+                "base_delay": 2,
+                "delay_per_summon": 0,
+                "num_entities_spawned": 8,
+                "entity_type": "minecraft:evocation_fang",
+                "size": 2.5,
+                "entity_lifespan": 1.1
+              }
+            ]
+          },
+          {
+            "min_activation_range": 5,
+            "weight": 3,
+            "cooldown_time": 5,
+            "cast_duration": 2,
+            "particle_color": "#FF664D59",
+            "sequence": [
+              {
+                "shape": "line",
+                "target": "self",
+                "base_delay": 1,
+                "delay_per_summon": 0.5,
+                "num_entities_spawned": 8,
+                "entity_type": "minecraft:evocation_fang",
+                "size": 16,
+                "entity_lifespan": 1.1
+              }
+            ]
+          },
+          {
+            "weight": 1,
+            "cooldown_time": 17,
+            "cast_duration": 5,
+            "particle_color": "#FFB3B3CC",
+            "sequence": [
+              {
+                "shape": "circle",
+                "target": "self",
+                "base_delay": 5,
+                "num_entities_spawned": 3,
+                "entity_type": "minecraft:vex",
+                "summon_cap": 8,
+                "summon_cap_radius": 16,
+                "size": 1
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:behavior.send_event": {
+        "priority": 3,
+        "event_choices": [
+          {
+            "min_activation_range": 0,
+            "max_activation_range": 16,
+            "cooldown_time": 5,
+            "cast_duration": 3,
+            "particle_color": "#FFB38033",
+            "weight": 3,
+            "filters": {
+              "other_with_families": "sheep",
+              "other_with_color": 11
+            },
+            "sequence": [
+              {
+                "base_delay": 2,
+                "event": "wololo"
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 5,
         "entity_types": [
           {
             "filters": {
@@ -78,57 +172,6 @@
           }
         ],
         "must_see": true
-      },
-      "minecraft:behavior.casting_spell_goal": {
-        "priority": 1
-      },
-      "minecraft:behavior.summon_spell_goal": {
-        "priority": 5,
-        "entity_type": "minecraft:vex",
-        "summon_cap": 8,
-        "mobs_per_summon": 3
-      },
-      "minecraft:behavior.attack_spell_goal": {
-        "priority": 4,
-        "attacks": [
-          {
-            "attack_type": "circle",
-            "min_activation_range": 0,
-            "max_activation_range": 5,
-            "summon_type": "minecraft:evocation_fang",
-            "priority": 1,
-            "circles": [
-              {
-                "radius": 1.5,
-                "delay": 1,
-                "num_entities_spawned": 5
-              },
-              {
-                "radius": 2.5,
-                "delay": 3,
-                "num_entities_spawned": 8
-              }
-            ]
-          },
-          {
-            "attack_type": "line",
-            "min_activation_range": 5,
-            "summon_type": "minecraft:evocation_fang",
-            "priority": 2,
-            "range": 16,
-            "base_delay": 1,
-            "delay_between_spawns": 1
-          }
-        ]
-      },
-      "minecraft:behavior.wololo_spell_goal": {
-        "priority": 5,
-        "target_types": [
-          "minecraft:sheep"
-        ],
-        "target_color": "blue",
-        "change_color": "red",
-        "range": 16
       },
       "minecraft:behavior.look_at_player": {
         "priority": 9,

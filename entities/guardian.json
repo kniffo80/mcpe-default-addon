@@ -84,7 +84,6 @@
       "minecraft:navigation.swim": {},
       "minecraft:movement.sway": {},
       "minecraft:jump.static": {},
-      "minecraft:can_swim": {},
       "minecraft:breathable": {
         "breathesWater": true
       },

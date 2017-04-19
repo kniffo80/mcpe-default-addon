@@ -148,6 +148,20 @@
           "value": 1
         }
       },
+      "cartographer": {
+        "minecraft:type_family": {
+          "family": [
+            "cartographer",
+            "zombie_villager",
+            "zombie",
+            "undead",
+            "monster"
+          ]
+        },
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
       "cleric": {
         "minecraft:type_family": {
           "family": [
@@ -238,7 +252,9 @@
         "id": "minecraft:zombie_villager"
       },
       "minecraft:navigation.walk": {
-        "can_float": true
+        "can_float": true,
+        "can_pass_doors": true,
+        "can_open_doors": true
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
@@ -416,6 +432,14 @@
                 "weight": 20,
                 "add": {
                   "component_groups": [
+                    "cartographer"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "add": {
+                  "component_groups": [
                     "cleric"
                   ]
                 }
@@ -536,6 +560,16 @@
             "add": {
               "component_groups": [
                 "librarian"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "other_with_families": "cartographer"
+            },
+            "add": {
+              "component_groups": [
+                "cartographer"
               ]
             }
           },

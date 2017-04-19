@@ -110,6 +110,11 @@
         "minecraft:color": {
           "value": 6
         }
+      },
+      "minecraft:sheep_red": {
+        "minecraft:color": {
+          "value": 14
+        }
       }
     },
     "components": {
@@ -380,6 +385,13 @@
         "remove": {
           "component_groups": [
             "minecraft:sheep_leashed"
+          ]
+        }
+      },
+      "wololo": {
+        "add": {
+          "component_groups": [
+            "minecraft:sheep_red"
           ]
         }
       }

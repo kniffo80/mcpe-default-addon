@@ -33,6 +33,7 @@
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
       "minecraft:can_climb": {},
+      "minecraft:can_fly": {},
       "minecraft:behavior.float": {
         "priority": 1
       },

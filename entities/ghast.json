@@ -26,7 +26,7 @@
       "minecraft:navigation.float": {
         "can_float": true
       },
-      "minecraft:float_wander": {
+      "minecraft:behavior.float_wander": {
         "priority": 2
       },
       "minecraft:can_fly": {},

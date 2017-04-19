@@ -16,7 +16,6 @@
       "minecraft:navigation.swim": {},
       "minecraft:movement.sway": {},
       "minecraft:jump.static": {},
-      "minecraft:can_swim": {},
       "minecraft:health": {
         "value": 80,
         "max": 80

@@ -7,7 +7,8 @@
       },
       "minecraft:type_family": {
         "family": [
-          "vex"
+          "vex",
+          "monster"
         ]
       },
       "minecraft:equipment": {
