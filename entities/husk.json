@@ -8,14 +8,12 @@
           "value": 0.53125
         },
         "minecraft:movement": {
-          "value": 0.35,
-          "max": 0.35
+          "value": 0.35
         }
       },
       "minecraft:zombie_husk_adult": {
         "minecraft:movement": {
-          "value": 0.23,
-          "max": 0.23
+          "value": 0.23
         },
         "minecraft:rideable": {
           "seat_count": 1,

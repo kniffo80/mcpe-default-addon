@@ -167,7 +167,6 @@
             ]
           }
         },
-        "minecraft:behavior.player_ride_tamed": {},
         "minecraft:inventory": {
           "inventory_size": 17,
           "container_type": "horse"
@@ -211,7 +210,8 @@
       "minecraft:mule_saddled": {
         "minecraft:is_saddled": {},
         "minecraft:input_ground_controlled": {},
-        "minecraft:can_power_jump": {}
+        "minecraft:can_power_jump": {},
+        "minecraft:behavior.player_ride_tamed": {}
       },
       "minecraft:mule_leashed": {
         "minecraft:behavior.move_towards_restriction": {

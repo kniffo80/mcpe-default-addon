@@ -23,8 +23,7 @@
         "value": 0
       },
       "minecraft:movement": {
-        "value": 0.3,
-        "max": 0.3
+        "value": 0.3
       },
       "minecraft:navigation.float": {
         "can_float": true

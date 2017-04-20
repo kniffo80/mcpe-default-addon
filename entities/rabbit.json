@@ -111,8 +111,7 @@
         "height": 0.67
       },
       "minecraft:movement": {
-        "value": 0.3,
-        "max": 0.3
+        "value": 0.3
       },
       "minecraft:navigation.walk": {
         "can_float": true,

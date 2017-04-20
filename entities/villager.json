@@ -325,8 +325,7 @@
       },
       "minecraft:nameable": {},
       "minecraft:movement": {
-        "value": 0.5,
-        "max": 0.5
+        "value": 0.5
       },
       "minecraft:navigation.walk": {
         "can_float": true,

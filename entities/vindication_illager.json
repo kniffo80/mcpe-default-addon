@@ -72,8 +72,7 @@
         "damage": 8
       },
       "minecraft:movement": {
-        "value": 0.35,
-        "max": 0.35
+        "value": 0.35
       },
       "minecraft:navigation.walk": {
         "can_float": true

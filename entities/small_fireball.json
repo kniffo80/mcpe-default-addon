@@ -15,7 +15,7 @@
             "damage": 5,
             "knockback": false,
             "catchFire": true,
-            "semirandomdiffdamage": true
+            "semirandomdiffdamage": false
           },
           "catch_fire": {
             "fireAffectedByGriefing": true

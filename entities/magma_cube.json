@@ -59,16 +59,16 @@
       "minecraft:slime_calm": {
         "minecraft:movement.jump": {
           "jump_delay": [
-            1,
-            3
+            2,
+            6
           ]
         }
       },
       "minecraft:slime_aggressive": {
         "minecraft:movement.jump": {
           "jump_delay": [
-            0.32,
-            1
+            0.667,
+            2
           ]
         }
       }
@@ -96,8 +96,8 @@
       "minecraft:jump.static": {},
       "minecraft:movement.jump": {
         "jump_delay": [
-          0.5,
-          1.5
+          2,
+          6
         ]
       },
       "minecraft:can_climb": {},
